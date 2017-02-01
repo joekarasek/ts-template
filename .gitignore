@@ -1,0 +1,18 @@
+# System files in case they are not globally ignored
+.DS_Store
+.idea
+
+# Development Environment
+app/css
+build
+npm-debug.log
+node_modules
+sassdoc
+
+
+# Security and Deployment Configuration
+.htaccess
+siteConfig.py
+
+# Misc.
+*.pyc
