@@ -13,13 +13,19 @@ npm start
 ## Usage
 
 Compile resources, open site and documentation, start watches:
-```npm start```
+```
+npm start
+```
 
 Compile all resources including scss:
-```npm run compile```
+```
+npm run compile
+```
 
 Build production version of site:
-```npm run build```
+```
+npm run build
+```
 
 
 ## Sass/Scss and Sass Documentation
@@ -29,7 +35,9 @@ Sass/Scss documentation is handled by Sassdoc. See [sassdoc](http://sassdoc.com/
 Add more sassdoc annotations like `/// @param` by seeing [docs here](http://sassdoc.com/annotations).
 
 Build Sassdocs:
-```npm run compile:sassdoc```
+```
+npm run compile:sassdoc
+```
 
 ## JS and JS Documentation
 
@@ -38,7 +46,9 @@ Javascript documentation is handled by DocumentationJS. See [documenationJS](htt
 Add more jsdoc annotations like `/** @param */` by seeing [docs here](https://github.com/documentationjs/documentation/blob/master/docs/GETTING_STARTED.md).
 
 Build JSdocs:
-```npm run build:jsdoc```
+```
+npm run build:jsdoc
+```
 
 
 ## Deployment to Webfaction
@@ -46,7 +56,9 @@ Build JSdocs:
 These sites are hosted through [Webfaction](https://www.webfaction.com/) with DNS handled by [Name Cheap](https://www.namecheap.com/).
 
 The deployment scripts are not currently complete, but will take care of configuring the webfaction server for you.
-```npm run deploy```
+```
+npm run deploy
+```
 _*Note:*Deployment requires `./siteConfig.py`. See `./example.siteConfig.py` for instructions on setting up this file._
 
 To finish deployment:
