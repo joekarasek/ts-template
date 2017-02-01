@@ -3,36 +3,73 @@
 ## Description
 This template is designed to get you started building a single page promotional website for Tyson Steele and Associates. It includes several resources including external resources (Canvas HTML5 Template, Bootstrap, jQuery), a suite of development, build, and deployment tools using Gulp, useful scss mixins, and documentation. 
 
-## Setup
+## Getting Started
 
-Install node dependencies:
-
-    npm install
+```
+npm install
+npm start
+```
 
 ## Usage
 
-Compile site:
+Compile resources, open site and documentation, start watches:
+`npm start`
 
-    npm run compile
+Compile all resources including scss:
+`npm run compile`
 
-Compile site, start watches, and serve:
+Build production version of site:
+`npm run build`
 
-    npm start
 
-Deploy site: (*Note*: You will need to setup your siteConfig.py file to deploy)
+## Sass/Scss and Sass Documentation
 
-    npm run deploy
-
-## Sass
-
-See [sassdoc](http://sassdoc.com/) docs at `./sassdoc` (at http://localhost:3002/sassdoc after `npm start`)
+Sass/Scss documentation is handled by Sassdoc. See [sassdoc](http://sassdoc.com/) docs at `./sassdoc` (at http://localhost:3002/sassdoc after `npm start`)
 
 Add more sassdoc annotations like `/// @param` by seeing [docs here](http://sassdoc.com/annotations).
+
+Recompile Sassdocs:
+`npm run compile:sassdoc`
+
+## JS and JS Documentation
+
+Javascript documentation is handled by DocumentationJS. See [documenationJS](http://documentation.js.org/) docs at `./jsdoc` (at http://localhost:3002/jsdoc after `npm start`)
+
+Add more jsdoc annotations like `/** @param */` by seeing [docs here](https://github.com/documentationjs/documentation/blob/master/docs/GETTING_STARTED.md).
+
+## Deployment to Webfaction
+
+These sites are hosted through [Webfaction](https://www.webfaction.com/) with DNS handled by [Name Cheap](https://www.namecheap.com/).
+
+The deployment scripts are not currently complete, but will take care of configuring the webfaction server for you.
+`npm run deploy`
+_*Note:*Deployment requires `./siteConfig.py`. See `./example.siteConfig.py` for instructions on setting up this file._
+
+To finish deployment:
+1. Ssh into the webfaction server as dan linn
+2. `cd webapps/projectName_app`
+3. Clone the project with *this directory as the root* (`git clone url .`) 
+4. `npm install`
+5. `npm run build`
+
+## DNS through Name Cheap
+
+DNS for this project is handled through [Name Cheap](https://www.namecheap.com/)
+
+1. Log into Name Cheap as Dan Linn
+2. Domains > hwdevs.site > "Manage"
+3. Advanced DNS > "Add new record"
+	- Type: A Record
+	- Host: site name (the last name of the doctor, lowercase)
+	- Value: 198.58.114.22
+	- TTL: automatic
+
+*Note:* It may take up to 24 hours for DNS to propogate and for the site to go live.
 
 ## Troubleshooting
 
 Delete `node_modules` and re-install:
-
-    rm -rf node_modules
-    npm install
-
+```
+rm -rf node_modules
+npm install
+```

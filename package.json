@@ -32,7 +32,7 @@
     "serve": "cd src && browser-sync start --server --files=*.html,css/*.css",
     "start": "npm run clean && npm run compile && npm run open:sassdoc && npm run open:jsdoc && (npm run watch & npm run serve)",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "git push origin master && ./deploy.py && open http://saxton.hwdevs.site"
+    "deploy": "./deploy.py"
   },
   "author": "",
   "license": "ISC"

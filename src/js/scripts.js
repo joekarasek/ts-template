@@ -1,11 +1,14 @@
 (function($) {
 
+  // =============================================
+  // ==== Define Hello World Custom Functions ====
+  // =============================================
+  
   /**
    * @description This object holds standard scripts for needed functionality on all sites including the request appointment form and orphan management.
    * @constructor
    */
-  function HelloWorldDevs() {
-  }
+  function HelloWorldDevs() {}
 
   /**
    * @description Replaces ' ' with a no-break space to prevent orphans
@@ -170,8 +173,13 @@
     $(target).owlCarousel(settings);
   };
 
-  var HWD = new HelloWorldDevs();
 
+  // =============================================
+  // ==== Define Hello World Custom Functions ====
+  // =============================================
+  
+  var HWD = new HelloWorldDevs();
+  
   HWD.noOrphans('h1,h2,h3,h4,h5,h6,li,p', '.allow-orphan');
   HWD.mailForm('#mail-form', '#success_msg' , '7fb35345-752d-4792-9480-cd3db6674a62');
   HWD.marqueeCarousel(6000);
