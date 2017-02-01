@@ -1,0 +1,145 @@
+#section-services {
+
+  //Colors
+
+
+
+  .heading {
+    h2 {
+      color: $c-grey-blue;
+      text-align: center;
+      margin-bottom: 0;
+      padding-top: $spacing-md;
+      padding-bottom: $spacing-sm;
+      
+    }
+    p {
+      color: $c-grey;
+      font-family: $ff-lato;
+      padding-bottom: $spacing-md;
+      a {
+        @include link-color($c-teal-link);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .services {
+    &--slab {
+      min-height: 350px;
+
+      h3 {
+        font-family: $ff-raleway;
+        margin-bottom: $spacing-xs;
+      }
+      p {
+        font-family: $ff-lato;
+        font-weight: 400;
+      }
+      .container {
+        padding-top: $spacing-md;
+        padding-bottom: $spacing-md;
+      }
+      &:nth-child(1) {
+        background-image: url("/assets/services/featured/cosmetic.jpg");
+        @media screen and (max-width: $width-sm) {
+          background-image: none;
+          min-height: 200px;
+        }
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: $c-teal-2;
+        color: $c-white;
+        h3 {
+          color: $c-white;
+        }
+      }
+      &:nth-child(2) {
+        background-image: url("/assets/services/featured/invisalign.jpg");
+        background-position: left;
+        @media screen and (max-width: $width-sm) {
+          background-image: none;
+          min-height: 200px;
+        }
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: $c-grey-yellow;
+        p {
+          color: $c-grey;
+        }
+      }
+      &:nth-child(3) {
+        background-image: url("/assets/services/featured/cerec.jpg");
+        @media screen and (max-width: $width-sm) {
+          background-image: none;
+          min-height: 200px;
+        }
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        h3 {
+          color: $c-grey-blue;
+        }
+        p {
+          color: $c-grey;
+        }
+      }
+    }
+  }
+
+  .services-carousel {
+
+    &--item {
+      &>a {
+        line-height: 0;
+        display: block; 
+      }
+    }
+
+    &--image {
+      @include hover-plus;
+    }
+    &--title {
+      position: absolute;
+      bottom: 5px;
+      text-align: center;
+      width: 100%;
+      z-index: 5;
+      h5 {
+        font-family: $ff-raleway;
+        color: $c-white;
+        margin-bottom: 0;
+      }
+      a {
+        @include link-color($c-white);
+      }
+    }
+  }
+
+  .service-modal-wrapper {
+    & .modal-title {
+      @include h3;
+      font-family: $ff-lato;
+      font-weight: 700;
+      color: $c-black-blue;
+      padding-top: 10px;
+    }
+    & p {
+      color: $c-black-blue;
+      padding-bottom: 15px;
+    }
+    .modal-image {
+      text-align: center;
+      @media screen and (max-width: $width-md) {
+        display: none;
+      }
+    }
+    img {
+      max-width: 270px;
+      padding-bottom: 20px;
+    }
+  }
+
+
+}

@@ -1,0 +1,128 @@
+#slider {
+  height: 50vw;
+  max-height: 800px;
+
+  .swiper-slide.slide1 {
+    background-image: url('/assets/saxton-slide1.jpg');
+  }
+  .swiper-slide.slide2 {
+    background-image: url('/assets/saxton-slide2.jpg');
+  }
+  .swiper-slide.slide3 {
+    background-image: url('/assets/saxton-slide3.jpg');
+  }
+
+  .swiper-slide .row {
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
+  }
+
+  .slide1 {
+    h1, h3 {
+      font-family: $ff-raleway;
+      color: $c-white;
+      font-weight: 400;
+      line-height: 1;
+    }
+    h1 {
+      @include font-size(135px, 85px, 75px, 65px, 20px);
+    }
+    h3 {
+
+    }
+    h2 {
+      color: $c-white;
+      font-family: $ff-advent;
+      margin-bottom: -10px;
+    }
+    h5 {
+      color: $c-white;
+      font-family: $ff-lato;
+    }
+
+  }
+  .slide2 {
+    text-align: left;
+    h2 {
+      margin-bottom: 0;
+      line-height: 1;
+      @include font-size(32px, 30px, 28px);
+    }
+    h3 {
+      color: $c-white;
+      font-family: $ff-advent;
+      margin-bottom: $spacing-sm;
+      @include font-size(55px, 45px, 35px, 30px, 25px);
+      line-height: 1;
+    }
+    .stars {
+      margin-bottom: 0;
+      line-height: 1;
+      .icon-star3 {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      }
+    }
+    h5 {
+      font-family: $ff-lato;
+      color: $c-white;
+      margin-bottom: $spacing-md;
+      line-height: $lh-lg;
+    }
+  }
+  .slide3 {
+    h1 {
+      color: $c-white;
+      margin-bottom: 0;
+      font-weight: 400;
+      font-family: $ff-advent;
+      line-height: $lh-sm;
+    }
+    h2 {
+      color: $c-white;
+      font-weight: 400;
+      line-height: $lh-sm;
+      font-family: $ff-raleway;
+    }
+    h4 {
+      text-transform: uppercase;
+      color: $c-white;
+      font-weight:bold;
+      font-family: $ff-lato;
+      line-height: $lh-sm;
+      margin-bottom: $spacing-lg;
+    }
+    .btn {
+      @include lr-padding(80px, 60px, 60px);
+    }
+  }
+
+  .icon-star3 {
+    color: $c-star;
+  }
+
+}
+
+.animated.infinite.bounce {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+}
+
+.icon-arrow-down {
+  color: white;
+  border: 2px solid white;
+  border-radius: 10000px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+}
+
+
+#mobile-background {
+  display: none;
+  @media (max-width: $width-md) {
+    display: block;
+    position: relative;
+  }
+}

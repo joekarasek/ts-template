@@ -1,0 +1,126 @@
+.specials-card {
+  background-color: white;
+  border-radius: 8px;
+  height: 100%;
+  padding-bottom: 20px;
+  & h5 {
+    line-height: 1.2;
+    padding-top: 10px;
+  }
+}
+.specials-1 {
+  background: #166F8A;
+  color:#166F8A;
+}
+.specials-2 {
+  background: #86B84E;
+  color:#86B84E;
+}
+
+.specials-3 {
+  background: #22C2F0;
+  color:#22C2F0;
+}
+.specials-row p {
+  font-size:18px;
+  color:#797F8C;
+  margin-bottom:20px;
+  line-height:25px !important;
+  margin-top:20px;
+}
+.specials-label {
+  font-size:14px;
+  color:#797F8C;
+}
+.specials-save {
+  font-size:18px;
+  text-transform:uppercase;
+  background:none;
+}
+#summer-specials .col-md-4 {
+  border-radius:8px;
+  padding:0;
+  margin-left:20px;
+  margin-right:20px;
+  height:452px;
+  background:#FFF;
+  margin-bottom:50px;
+}
+#summer-specials .container {
+  padding-left:0;
+  padding-right:0;
+}
+.specials-row {
+  display:flex;
+  text-align:center;
+}
+.specials-top {
+  height:196px;
+  padding-top:15px;
+  border-radius:8px 8px 0px 0px;
+}
+.specials-circle {
+  position:relative;
+  border:7px solid #FFF;
+  width:146px;
+  height:146px;
+  border-radius:50%;
+  top:-73px;
+  margin:0 auto;
+  margin-bottom:-73px;
+}
+.specials-bottom {
+  padding-top:10px;
+  padding-left:12.5px;
+  padding-right:12.5px;
+}
+.specials-save {
+  font-size:18px;
+}
+.price {
+  font-size: 78px;
+  color: #FFF;
+  position: absolute;
+  padding-top: 5px;
+  padding-left: 10px;
+  width: 100px;
+  left: 50%;
+  margin-left: -45px;
+}
+.price:before {
+  content: '$';
+  font-size: 30px;
+  color: #FFF;
+  position: absolute;
+  left: -10px;
+  top: 40px;
+}
+.dollar {
+  display: none;
+}
+.specials-row h5 {
+  font-size:32px;
+  color:#FFF;
+}
+
+@media (max-width:1199px) {
+  .specials-row p {
+    margin-top:10px;
+  }
+}
+@media (max-width:991px) {
+  .specials-row {
+    display:inherit;
+  }
+  #summer-specials .col-md-4 {
+    max-width:400px;
+    margin:0 auto;
+    margin-bottom:50px;
+  }
+}
+
+
+#section-specials {
+  background-size: cover;
+  background-repeat: none;
+}

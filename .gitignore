@@ -5,6 +5,7 @@
 # Development Environment
 app/css
 build
+jsdoc
 npm-debug.log
 node_modules
 sassdoc

@@ -1,0 +1,133 @@
+/// Vertical Centering
+/// @group styling
+/// @example .slide-content { @include vertical-center(); }
+@mixin vertical-center() {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/// Responsive Left/Right Padding
+/// @group styling
+///	@param $xl - left and right padding above `$width-lg`
+///	@param $lg - left and right padding above `$width-md`
+///	@param $md - left and right padding above `$width-sm`
+///	@param $sm - left and right padding above `$width-xs`
+///	@param $xs - left and right padding below `$width-xs`
+@mixin lr-padding($xl: 20px, $lg: 20px, $md: 20px, $sm: 20px, $xs: 20px) {
+  padding-left: $xl;
+  padding-right: $xl;
+  @media screen and (max-width: $width-lg) {
+    padding-left: $lg;
+    padding-right: $lg;
+  }
+  @media screen and (max-width: $width-md) {
+    padding-left: $md;
+    padding-right: $md;
+  }
+  @media screen and (max-width: $width-sm) {
+    padding-left: $sm;
+    padding-right: $sm;
+  }
+  @media screen and (max-width: $width-xs) {
+    padding-left: $xs;
+    padding-right: $xs;
+  }
+}
+
+/// Parallax background
+/// Sets the background image, cover, no-repeat and center for best effect when using the "parallax" canvas class
+/// @group effects
+/// @example
+@mixin parallax-background() {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: none;
+}
+
+/// Hover Effect - Plus Sign with Darken
+/// @group effects
+@mixin hover-plus() {
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  &:hover:after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 60px;
+    left: 50%;
+    margin-left: -17px;
+    margin-top: -45px;
+    z-index: 11;
+  }
+  &:hover:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.37);
+  }
+}
+
+/// Set Link Color - sets the color of a link, and its hover state
+/// @group style
+/// @param $color
+@mixin link-color($color) {
+  color: $color;
+  &:hover {
+    color: $color;
+  }
+}
+
+/// The Nav Color Mixin
+/// @param $color - the text color
+/// @param {number} $child [false] - the `nth-child`
+@mixin nav-color($color, $child:false) {
+  @if $child {
+    li:nth-child(#{$child}) {
+      & a {
+        color: $color;
+        &:hover {
+          color: $color;
+        }
+        &>div {
+          color: $color;
+        }
+      }
+    }
+  } @else {
+    li {
+      & a {
+        color: $color;
+        &:hover {
+          color: $color;
+        }
+        &>div {
+          color: $color;
+        }
+      }
+    }
+  }
+}
+
+/// Static Nav Height - sticky nav menu will not change height when you scroll. Over writes canvas.
+/// @group effect
+/// @example #wrapper { @include static-nav-menu(); }
+@mixin static-nav-menu() {
+  #header.sticky-header:not(.static-sticky),
+  #header.sticky-header:not(.static-sticky) #header-wrap,
+  #header.sticky-header:not(.static-sticky):not(.sticky-style-2):not(.sticky-style-3) #logo img {
+    height: 100px;
+  }
+  #header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a {
+    padding-top: 39px;
+  }
+  #header.sticky-header:not(.static-sticky):not(.sticky-style-2):not(.sticky-style-3) #logo img {
+    transform: translateY(15%);
+  }
+}

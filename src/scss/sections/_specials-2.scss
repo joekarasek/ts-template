@@ -1,0 +1,131 @@
+#section-specials {
+
+  //Colors
+  $c-heading--main: $c-white;
+  $c-heading--sub: $c-white;
+
+  $c-card--main: $c-white;
+
+
+  .container-wrapper {
+    background-image: url('../../assets/specials-bkgd.jpg');
+    @include parallax-background;
+    padding-top: $spacing-lg;
+  }
+
+  .heading {
+    padding-bottom: $spacing-md;
+    h2 {
+      font-family: $ff-raleway;
+      color: $c-heading--main;
+      margin-bottom: 0;
+      line-height: $lh-sm;
+      font-weight: 400;
+      text-shadow: 2px 2px 2px rgba(black, 0.5);
+    }
+    h3 {
+      color: $c-heading--sub;
+      font-family: $ff-advent;
+      margin-bottom: 0;
+      line-height: $lh-sm;
+      font-weight: 400;
+      text-shadow: 2px 2px 2px rgba(black, 0.5);
+    }
+  }
+
+  .card {
+    background-color: rgba($c-white, 0.8);
+    text-align: center;
+    height: 100%;
+    border-radius: 0.1px;
+
+    .top {
+      padding-bottom: 65px;
+      h3 {
+        font-family: $ff-lato;
+        color: $c-card--main;
+        margin-bottom: 0;
+        line-height: $lh-xs;
+        padding-top: $spacing-md;
+        font-size: 30px;
+        font-weight: 900;
+        padding-bottom: $spacing-sm;
+      }
+    }
+
+    .bottom {
+      .price {
+        margin-top: -65px;
+        position: relative;
+        display: inline-block;
+        border-radius: 10000px;
+        height: 130px;
+        width: 130px;
+        border: 5px solid white;
+      }
+      h1 {
+        color: $c-white;
+        margin-bottom: 0;
+        padding: $spacing-sm;
+        padding-top: 25px;
+        line-height: $lh-xs;
+        font-family: $ff-lato;
+        font-weight: 700;
+        font-size: 72px !important;
+        &:before {
+          content: '$';
+          font-size: 22px;
+          font-weight: 400;
+          position: absolute;
+          top: $spacing-md;
+          left: 10px;
+        }
+
+      }
+      h6:first-child {
+        padding-top: $spacing-md;
+        color: $c-grey;
+        font-weight: 700;
+      }
+      .copy {
+        font-family: $ff-open;
+        padding-left: $spacing-sm;
+        padding-right: $spacing-sm;
+        color: $c-grey;
+      }
+      p {
+        padding-bottom: $spacing-md;
+        color: $c-grey;
+      }
+    }
+  }
+  .card-1 .top {  background-color: $c-card1;  }
+  .card-1 .price {  background-color: $c-card1;  }
+  .card-1 .bottom h6 {
+    color: $c-card1;
+  }
+  .card-2 .top {  background-color: $c-card2;  }
+  .card-2 .price {  background-color: $c-card2;  }
+  .card-2 .bottom h6 {
+    color: $c-card2;
+  }
+  .card-3 .top {  background-color: $c-card3;  }
+  .card-3 .price {  background-color: $c-card3;  }
+  .card-3 .bottom h6 {
+    color: $c-card3;
+  }
+  .card-1 h6:first-child {  color: $c-white;  }
+  .card-2 h6:first-child {  color: $c-white;  }
+  .card-3 h6:first-child {  color: $c-white;  }
+
+  .row {
+    display: flex;
+    padding-bottom: $spacing-xl;
+    @media screen and (max-width: $width-sm) {
+      display: block;
+      .card {
+        margin-bottom: $spacing-md;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+#section-reviews {
+  background-image: url('/assets/reviews-bkgd.jpg');
+  background-attachment: fixed;
+  @include parallax-background;
+  @media  screen and (max-width: $width-md) {
+    background-attachment: inherit;
+    background-image: none;
+    background-color: $c-grey-orange;
+    h2 {
+      color: $c-grey-blue !important;
+    }
+  }
+
+  .heading {
+    padding-top: $spacing-md;
+    padding-bottom: $spacing-sm;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: $spacing-xs;
+    margin-top: $spacing-md;
+    font-family: $ff-raleway;
+    font-weight: 400;
+    color: $c-white;
+  }
+  .row {
+    padding-bottom: $spacing-lg;
+  }
+  .review-wrapper>div:last-child {
+    //max-height: 600px;
+  }
+  .mobile-image {
+    img {
+      width: 100%;
+    }
+  }
+}

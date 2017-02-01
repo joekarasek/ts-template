@@ -1,0 +1,129 @@
+#section-location {
+  .card-wrapper {
+    float: left;
+    width: 50%;
+    height: 720px;
+    @media screen and (max-width: $width-sm) {
+      float: none;
+      width: 100%;
+      height: auto;
+      padding-top: $spacing-md;
+      padding-bottom: $spacing-sm;
+    }
+  }
+  .location-card {
+    @media screen and (min-width: $width-sm+1) {
+      @include  vertical-center;
+    }
+    background: $c-white;
+    margin: 30px 0;
+    border-radius: 0.1px;
+    font-family: $ff-lato;
+    padding-top: 0;
+    padding-bottom: 0;
+    @media (max-width: $width-md) {
+      margin-bottom: 5px;
+      margin-top: 0px;
+      background-color: rgba(255, 255, 255, 0);
+    }
+    img {
+      padding-bottom: $spacing-sm;
+    }
+    //address
+    p {
+      font-family: $ff-lato;
+      color: $c-black-blue;
+    }
+    h6 {
+      color: $c-grey-blue;
+      margin-bottom: 0;
+      line-height: $lh-sm;
+      font-family: $ff-lato;
+    }
+    //Click to View maps
+    a>h6 {
+      font-family: $ff-lato;
+      color: $c-teal-link;
+      padding-bottom: $spacing-md;
+    }
+    .btn {
+      margin-bottom: $spacing-md;
+    }
+    h6>span>a {
+      @include h4;
+      font-family: $ff-lato;
+      font-weight: 700;
+    }
+    .phone-number {
+      line-height: $lh-sm;
+      color: $c-grey-blue;
+      font-family: $ff-lato;
+      font-weight: 900;
+      margin-bottom: $spacing-md;
+      a:hover {
+        color: $c-grey-blue !important;
+        text-decoration: none;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .hours-table {
+      //color: $c-grey-location;
+      padding-bottom: $spacing-md;
+      h5 {
+        color: $c-grey-blue;
+        text-transform: capitalize;
+        font-family: $ff-lato;
+        font-weight: 900;
+        margin-bottom: 0;
+        padding-top: $spacing-md;
+      }
+      th {
+        width: 1px;
+        white-space: nowrap;
+        padding-right: 20px;
+        text-align: left;
+      }
+
+      td {
+        text-align: center;
+      }
+
+      table {
+        max-width: 250px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: $c-grey !important;
+      }
+    }
+
+  }
+
+  .map-wrapper {
+    width: 50%;
+    display: inline-block;
+    float: right;
+    &>a {
+      display: block;
+    }
+    @media screen and (max-width: $width-sm) {
+      float: none;
+      width: 100%;
+      height: auto;
+    }
+  }
+  #google-map5 {
+    height: 720px;
+    @media (max-width: $width-sm) {
+      height: 300px;
+    }
+  }
+
+
+}
+
+

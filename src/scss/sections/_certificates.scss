@@ -1,0 +1,16 @@
+#section-certificates {
+  background-color: $c-associations;
+  padding-top: $spacing-sm;
+  padding-bottom: $spacing-sm;
+  .owl-item {
+    text-align: center;
+    img {
+      width: inherit;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  .association-item {
+    //text-align: center;
+  }
+}

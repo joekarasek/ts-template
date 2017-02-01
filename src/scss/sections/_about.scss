@@ -1,0 +1,36 @@
+#section-about {
+
+  //Colors
+  $c-heading: $c-grey-blue;
+  $c-body: $c-grey;
+  $c-background: $c-grey-orange;
+
+  .marquee-image {
+    img {
+      width: 100%;
+    }
+  }
+
+
+  .about {
+    padding-top: $spacing-md;
+    padding-bottom: $spacing-lg;
+    background-color: $c-background;
+    &__heading {
+      h2 {
+        text-align: center;
+        margin-bottom: $spacing-sm;
+        color: $c-heading;
+        font-family: $ff-raleway;
+      }
+    }
+    &__body {
+      p {
+        color: $c-body;
+        font-family: $ff-lato;
+        font-weight: 400;
+        line-height: 1.4;
+      }
+    }
+  }
+}

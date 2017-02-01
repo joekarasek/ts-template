@@ -1,0 +1,39 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.18.1",
+    "documentation": "^4.0.0-beta.18",
+    "node-sass": "^3.13.0",
+    "nodemon": "^1.11.0",
+    "sassdoc": "^2.1.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "compile:css": "if [ ! -d build ]; then mkdir build; fi && node-sass --output-style=expanded --source-map-embed src/scss/main.scss src/css/main.css",
+    "watch:css": "node-sass --watch --output-style=expanded --source-map-embed src/scss/main.scss src/css/main.css",
+    "clean": "rm -rf build & rm -rf sassdoc",
+    "compile:sassdoc": "sassdoc src/scss/",
+    "watch:sassdoc": "nodemon --exec 'npm run compile:sassdoc' --ext scss ./src/scss",
+    "watch:jsdoc": "nodemon --exec 'npm run build:jsdoc' --watch ./src/js",
+    "open:sassdoc": "npm run build:jsdoc && open sassdoc/index.html",
+    "open:jsdoc": "open jsdoc/index.html",
+    "build:assets": "cp -r src/assets build/assets",
+    "build:js": "cp -r src/js build/js",
+    "build:jsdoc": "documentation build --shallow --output=jsdoc --format='html' src/js/scripts.js",
+    "build:html": "cp src/index.html build/index.html",
+    "build:css": "node-sass --output-style=expanded --source-map-embed src/scss/main.scss build/css/main.css",
+    "build:loaders": "cp -r src/assets/loaders build/css/images",
+    "build": "npm run clean && if [ ! -d build ]; then mkdir build; fi && npm run build:css && (npm run build:js & npm run build:html & npm run build:loaders & npm run build:assets)",
+    "compile": "if [ ! -d build ]; then mkdir build; fi && npm run compile:css & npm run compile:sassdoc",
+    "watch": "npm run watch:css & npm run watch:sassdoc & npm run watch:jsdoc",
+    "serve": "cd src && browser-sync start --server --files=*.html,css/*.css",
+    "start": "npm run clean && npm run compile && npm run open:sassdoc && npm run open:jsdoc && (npm run watch & npm run serve)",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "git push origin master && ./deploy.py && open http://saxton.hwdevs.site"
+  },
+  "author": "",
+  "license": "ISC"
+}

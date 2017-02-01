@@ -1,0 +1,174 @@
+/* ----------------------------------------------------------------
+	Fonts
+
+	Replace your Fonts as necessary
+-----------------------------------------------------------------*/
+
+
+
+body {
+	font-family: $ff-open;
+	color: $c-black;
+	line-height: 1.5;
+}
+
+p {
+	margin-bottom: $spacing-sm;
+}
+
+/// @group typography
+@mixin headings() {
+	line-height: 1.5;
+	font-family: $ff-raleway;
+	font-weight: 400;
+}
+
+
+#logo,
+#primary-menu ul li > a {
+	@include headings();
+}
+
+
+/* ----------------------------------------------------------------
+	You can change your Font Specific Settings here
+-----------------------------------------------------------------*/
+
+
+/// Responsive Font Size
+/// Applies font-sizes for several breakpoints
+/// @group typography
+///	@param $xl - size above `$width-lg`
+///	@param $lg - size above `$width-md`
+///	@param $md - size above `$width-sm`
+///	@param $sm - size above `$width-xs`
+///	@param $xs - size below `$width-xs`
+@mixin font-size($xl, $lg, $md: 18px, $sm: 16px, $xs: 14px) {
+	font-size: $xl;
+	@media screen and (max-width: $width-lg) {
+		font-size: $lg;
+	}
+	@media screen and (max-width: $width-md) {
+		font-size: $md;
+	}
+	@media screen and (max-width: $width-sm) {
+		font-size: $sm;
+	}
+	@media screen and (max-width: $width-xs) {
+		font-size: $xs;
+	}
+}
+
+@mixin h1() {
+	@include headings();
+	@include font-size(72px, 65px, 55px, 65px, 65px);
+}
+
+.h1,
+h1 {
+	@include h1();
+}
+
+
+@mixin h2() {
+	@include headings();
+	@include font-size(50px, 41px, 35px, 32px, 32px);
+}
+
+.h2,
+h2 {
+	@include h2();
+}
+
+@mixin h3() {
+	@include headings();
+	@include font-size(32px, 30px, 30px, 28px, 24px);
+}
+
+.h3,
+h3 {
+	@include h3();
+}
+
+@mixin h4() {
+	@include headings();
+	@include font-size(28px, 22px, 20px, 22px, 22px);
+}
+
+.h4,
+h4 {
+	@include h4();
+}
+
+@mixin h5() {
+	@include headings();
+	@include font-size(20px, 18px, 18px, 18px, 18px);
+}
+
+.h5,
+h5 {
+	@include h5();
+}
+
+@mixin h6() {
+	@include headings();
+	@include font-size(20px, 19px, 18px, 17px, 17px);
+}
+
+.h6,
+h6 {
+	@include h6();
+}
+
+p {
+	font-size: 18px;
+	font-weight: 100;
+	@media screen and (max-width: $width-sm) {
+		font-size: 16px;
+	}
+}
+
+#logo {
+	font-size: 36px;
+	line-height: 100%;
+}
+
+#primary-menu ul li > a {
+
+}
+
+.font-larger {
+	font-style: 120%;
+}
+
+.area-byline {
+	font-size: 48px;
+	@media screen and (max-width: $width-lg) {
+		font-size: 38px;
+	}
+	@media screen and (max-width: $width-md) {
+		font-size: 30px;
+		margin: 120px 0px;
+	}
+	@media screen and (max-width: $width-sm) {
+		font-size: 26px;
+		margin: 100px 0px;
+	}
+	@media screen and (max-width: $width-xs) {
+		font-size: 24px;
+		margin: 80px 0px;
+	}
+	margin: 150px 0px;
+}
+
+
+#section-services p,
+#section-services-two p {
+	line-height: 1.25;
+	margin-bottom: 20px;
+}
+
+#section-services h5,
+#section-services-two h5 {
+	margin-bottom: 10px;
+}

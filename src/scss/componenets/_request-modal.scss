@@ -1,0 +1,18 @@
+
+.form-error {
+  color: #D56724;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 30px;
+  display: none;
+}
+
+#requestModalContainer {
+  .modal-dialog {
+    background-color: #FFF;
+    border-radius: 15px;
+  }
+
+  button.close {
+    margin-top: -$spacing-sm;
+  }
+}

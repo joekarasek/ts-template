@@ -1,0 +1,88 @@
+#header.full-header {
+
+  $c-header: $c-white;
+  $c-menu-trigger: $c-black-blue;
+
+  width: 100%;
+  font-family: $ff-lato;
+  #primary-menu-trigger {
+    font-size: 30px;
+    pointer-events: auto;
+  }
+  #header-wrap {
+    background-color: $c-header;
+    border-bottom: 0;
+  }
+  #logo {
+    padding-right: 0;
+    margin-right: 0px;
+    border-right: none;
+  }
+
+  #primary-menu > ul {
+    margin-right: 0;
+    border-right: none;
+
+    @include nav-color($c-light-grey);
+    @include nav-color($c-btn, 1);
+    @include nav-color($c-dark-teal, 2);
+    @include nav-color($c-teal, 3);
+  }
+  
+  //when you scroll down
+  &.sticky-header {
+    #header-wrap {
+      //background-color: $c-nav-background;
+    }
+  }
+  #logo img {
+    padding: 2px;
+    padding-left: 5px;
+  }
+  @media screen and (max-width: $width-md) {
+    #logo {
+      img {
+        margin-right: auto;
+        padding: $spacing-xs;
+      }
+    }
+    #primary-menu-trigger {
+      right: 0;
+      left: inherit;
+      color: $c-menu-trigger;
+    }
+  }
+  
+}
+
+#primary-menu ul li > a {
+  font-family: $ff-lato;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 29px 12px;
+  @media screen and (max-width: 1300px) {
+    font-size: 15px;
+    padding: 29px 10px;
+    padding-bottom: 10px;
+  }
+  @media screen and (max-width: $width-lg) {
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    padding: 29px 6px;
+    padding-bottom: 10px;
+  }
+  @media screen and (max-width: 1090px) {
+    font-size: 13px;
+  }
+  @media screen and (max-width: 991px) {
+    padding-left: 40px !important;
+    font-size: 18px;
+  }
+  @media screen and (max-width: $width-sm) {
+  }
+  @media screen and (max-width: $width-xs) {
+  }
+  padding-bottom: 10px;
+}

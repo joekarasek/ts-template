@@ -1,0 +1,61 @@
+.owl-carousel .owl-nav [class*=owl-] {
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  right: 0;
+  zoom: 1;
+  width: 34px;
+  height: 34px;
+  line-height: 32px;
+  color: $c-white;
+  background-color: rgba($c-black, 0);
+  border: none;
+  font-size: 32px;
+  border-radius: 0;
+  opacity: 1;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  & [class*=icon-] {
+    font-size: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -5px;
+  }
+  img {
+    @include vertical-center;
+  }
+}
+.owl-carousel .owl-nav .owl-prev {
+  left: 0;
+  img {
+    -moz-transform: scaleX(-1) translateY(-50%);
+    -o-transform: scaleX(-1) translateY(-50%);
+    -webkit-transform: scaleX(-1) translateY(-50%);
+    transform: scaleX(-1) translateY(-50%);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
+}
+
+.owl-carousel:hover .owl-nav .owl-next {
+  left: auto;
+  right: 0;
+}
+.owl-carousel:hover .owl-nav .owl-prev {
+  opacity: 1;
+  left: 0;
+}
+
+.owl-carousel .owl-nav [class*=owl-]:hover {
+  background-color: rgba($c-black, 0) !important;
+  color: $c-white !important;
+  text-decoration: none;
+}
+
+.carousel-wrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+}
