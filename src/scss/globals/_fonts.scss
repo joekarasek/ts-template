@@ -7,7 +7,7 @@
 
 
 body {
-	font-family: $ff-open;
+	font-family: $ff-josef;
 	color: $c-black;
 	line-height: 1.5;
 }
@@ -19,7 +19,7 @@ p {
 /// @group typography
 @mixin headings() {
 	line-height: 1.5;
-	font-family: $ff-raleway;
+	font-family: $ff-cardo;
 	font-weight: 400;
 }
 
