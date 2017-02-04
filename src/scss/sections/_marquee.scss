@@ -50,31 +50,20 @@
     }
   }
   .slide2 {
-    text-align: left;
+    text-align: center;
     h2 {
+      font-family: $ff-cardo;
+      font-weight: 400;
+      color: #024378;
       margin-bottom: 0;
-      line-height: 1;
-      @include font-size(32px, 30px, 28px);
+      line-height: 1.2;
     }
-    h3 {
-      color: $c-white;
-      font-family: $ff-advent;
-      margin-bottom: $spacing-sm;
-      @include font-size(55px, 45px, 35px, 30px, 25px);
-      line-height: 1;
+    .stars>h2 {
+      color: #f5e82e;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
-    .stars {
-      margin-bottom: 0;
-      line-height: 1;
-      .icon-star3 {
-        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-      }
-    }
-    h5 {
-      font-family: $ff-lato;
-      color: $c-white;
-      margin-bottom: $spacing-md;
-      line-height: $lh-lg;
+    .copy {
+      font-family: $ff-josef;
     }
   }
   //.slide3 {
