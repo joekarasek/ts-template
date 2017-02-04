@@ -6,48 +6,48 @@ This template is designed to get you started building a single page promotional 
 ## Getting Started
 
 ```
-npm install
-npm start
+yarn install
+yarn start
 ```
 
 ## Usage
 
 Compile resources, open site and documentation, start watches:
 ```
-npm start
+yarn start
 ```
 
 Compile all resources including scss:
 ```
-npm run compile
+yarn run compile
 ```
 
 Build production version of site:
 ```
-npm run build
+yarn run build
 ```
 
 
 ## Sass/Scss and Sass Documentation
 
-Sass/Scss documentation is handled by Sassdoc. See [sassdoc](http://sassdoc.com/) docs at `./sassdoc` (at http://localhost:3002/sassdoc after `npm start`)
+Sass/Scss documentation is handled by Sassdoc. See [sassdoc](http://sassdoc.com/) docs at `./sassdoc` (at http://localhost:3002/sassdoc after `yarn start`)
 
 Add more sassdoc annotations like `/// @param` by seeing [docs here](http://sassdoc.com/annotations).
 
 Build Sassdocs:
 ```
-npm run compile:sassdoc
+yarn run compile:sassdoc
 ```
 
 ## JS and JS Documentation
 
-Javascript documentation is handled by DocumentationJS. See [documenationJS](http://documentation.js.org/) docs at `./jsdoc` (at http://localhost:3002/jsdoc after `npm start`)
+Javascript documentation is handled by DocumentationJS. See [documenationJS](http://documentation.js.org/) docs at `./jsdoc` (at http://localhost:3002/jsdoc after `yarn start`)
 
 Add more jsdoc annotations like `/** @param */` by seeing [docs here](https://github.com/documentationjs/documentation/blob/master/docs/GETTING_STARTED.md).
 
 Build JSdocs:
 ```
-npm run build:jsdoc
+yarn run build:jsdoc
 ```
 
 
@@ -57,7 +57,7 @@ These sites are hosted through [Webfaction](https://www.webfaction.com/) with DN
 
 The deployment scripts are not currently complete, but will take care of configuring the webfaction server for you.
 ```
-npm run deploy
+yarn run deploy
 ```
 _*Note:*Deployment requires `./siteConfig.py`. See `./example.siteConfig.py` for instructions on setting up this file._
 
@@ -65,8 +65,8 @@ To finish deployment:
 1. Ssh into the webfaction server as dan linn
 2. `cd webapps/projectName_app`
 3. Clone the project with *this directory as the root* (`git clone url .`) 
-4. `npm install`
-5. `npm run build`
+4. `yarn install`
+5. `yarn run build`
 
 ## DNS through Name Cheap
 
@@ -87,5 +87,5 @@ DNS for this project is handled through [Name Cheap](https://www.namecheap.com/)
 Delete `node_modules` and re-install:
 ```
 rm -rf node_modules
-npm install
+yarn install
 ```
