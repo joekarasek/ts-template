@@ -38,6 +38,12 @@
   // team carosuel
   .section-team-carosuel {
     background-color: rgba(#DDDDDD, 0.23);
+    h5 {
+      text-align: center;
+      color: #024378;
+      font-family: $ff-cardo;
+      font-weight: 700;
+    }
   }
   .team-carousel--wrapper {
     padding: 30px 60px;
@@ -45,10 +51,18 @@
   .image-wrapper {
     @include hover-plus();
   }
-  h5 {
-    text-align: center;
-    color: #024378;
-    font-family: $ff-cardo;
-    font-weight: 700;
+
+  .team-modals {
+    h5 {
+      margin-bottom: 0;
+    }
+    img {
+      max-width: 200px;
+    }
+    .modal-image {
+      text-align: center;
+      margin-bottom: 15px;
+    }
   }
+
 }

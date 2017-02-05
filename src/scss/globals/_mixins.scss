@@ -52,6 +52,7 @@
   display: inline-block;
   position: relative;
   &:hover:after {
+    font-family: serif;
     content: "+";
     position: absolute;
     top: 50%;
