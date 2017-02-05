@@ -85,6 +85,21 @@
   }
 }
 
+/// Styling for the Birdeye Reviews Footer
+/// @group reviews
+/// @example #section
+@mixin birdeye-footer() {
+  .bf-dv {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    color: #FFF !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .bf-pro {
+    color: #FFF !important;;
+  }
+}
+
 /// The Nav Color Mixin
 /// @param $color - the text color
 /// @param {number} $child [false] - the `nth-child`

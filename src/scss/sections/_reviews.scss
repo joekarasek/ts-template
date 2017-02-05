@@ -1,5 +1,5 @@
 #section-reviews {
-  background-image: url('/assets/reviews-bkgd.jpg');
+  background-image: url('/assets/reviews-bg.jpeg');
   background-attachment: fixed;
   @include parallax-background;
   @media  screen and (max-width: $width-md) {
@@ -19,8 +19,8 @@
     text-align: center;
     margin-bottom: $spacing-xs;
     margin-top: $spacing-md;
-    font-family: $ff-raleway;
     font-weight: 400;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.48);
     color: $c-white;
   }
   .row {
@@ -34,4 +34,6 @@
       width: 100%;
     }
   }
+
+    @include birdeye-footer();
 }
