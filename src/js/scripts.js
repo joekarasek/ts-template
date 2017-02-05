@@ -199,7 +199,32 @@
   HWD.marqueeCarousel(6000);
   HWD.googleMap('#google-map5', '36.8490793,-76.0278585', '36.8490793,-76.0278585');
   HWD.scrollToFix('#primary-menu');
-  HWD.itemCarousel('.js-service-carousel');
+  HWD.itemCarousel('.js-services-carousel', {
+    items: 1,
+    loop: true,
+    autoplay: true,
+    autoplaySpeed: 400,
+    autoplayTimeout: 6000,
+    autoplayHoverPause:true,
+    nav: true,
+    dots: false,
+    margin: 40,
+    navText: [
+      '<img src="assets/carousel-arrow.png" alt="navigation arrow">',
+      '<img src="assets/carousel-arrow.png" alt="navigation arrow">'
+    ],
+    responsive: {
+      480: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      992: {
+        items: 4
+      }
+    }
+  });
   HWD.itemCarousel('.js-team-carousel', {
     items: 1,
     loop: true,
