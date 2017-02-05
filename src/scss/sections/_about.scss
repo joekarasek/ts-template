@@ -1,36 +1,35 @@
 #section-about {
 
-  //Colors
-  $c-heading: $c-grey-blue;
-  $c-body: $c-grey;
-  $c-background: $c-grey-orange;
-
-  .marquee-image {
-    img {
-      width: 100%;
+  .heading {
+    h2{
+      color: #024378;
     }
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
-
-
-  .about {
-    padding-top: $spacing-md;
-    padding-bottom: $spacing-lg;
-    background-color: $c-background;
-    &__heading {
-      h2 {
-        text-align: center;
-        margin-bottom: $spacing-sm;
-        color: $c-heading;
-        font-family: $ff-raleway;
-      }
-    }
-    &__body {
-      p {
-        color: $c-body;
-        font-family: $ff-lato;
-        font-weight: 400;
-        line-height: 1.4;
-      }
+  .about-priluck--wrapper {
+    background-image: url('/assets/team/bio-priluck.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+  .about-nordone--wrapper {
+    background-image: url('/assets/team/bio-nordone.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+  h3 {
+    color: #3d893f;
+    font-family: $ff-cardo;
+    font-weight: 400;
+    padding-top: 90px;
+  }
+  p {
+    color: #535353;
+    &:last-child {
+      margin-bottom: 60px;
     }
   }
 }
