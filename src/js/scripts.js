@@ -252,7 +252,7 @@
     }
   });
   HWD.stopVideoOnModalClose('#videoModal', '#video-one');
-
+  
 
 
 })(jQuery);
