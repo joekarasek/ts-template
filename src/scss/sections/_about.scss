@@ -19,6 +19,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right top;
+    border-top: 1px solid #5D7278;
   }
   h3 {
     color: #3d893f;
@@ -31,5 +32,23 @@
     &:last-child {
       margin-bottom: 60px;
     }
+  }
+
+
+  // team carosuel
+  .section-team-carosuel {
+    background-color: rgba(#DDDDDD, 0.23);
+  }
+  .team-carousel--wrapper {
+    padding: 30px 60px;
+  }
+  .image-wrapper {
+    @include hover-plus();
+  }
+  h5 {
+    text-align: center;
+    color: #024378;
+    font-family: $ff-cardo;
+    font-weight: 700;
   }
 }
