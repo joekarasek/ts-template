@@ -175,6 +175,18 @@
     $(target).owlCarousel(settings);
   };
 
+  /**
+   * Stops videos inside of a modal when that modal is closed (assuming the video is provided by iframe).
+   * @param {string} modalTarget A css selector string
+   * @param {string} videoTarget A css selector string
+   * @example HWD.stopVideoOnModalClose('#videoModal', '#videoIframe');
+   */
+  HelloWorldDevs.prototype.stopVideoOnModalClose = function(modalTarget, videoTarget) {
+    $(modalTarget).on('hidden.bs.modal', function() {
+      var $videoTarget = $(videoTarget);
+      $videoTarget.attr('src', $videoTarget.attr('src'));
+    });
+  };
 
   // =============================================
   // ==== Define Hello World Custom Functions ====
@@ -214,6 +226,8 @@
       }
     }
   });
+  HWD.stopVideoOnModalClose('#videoModal', '#video-one');
+
 
 
 })(jQuery);

@@ -65,4 +65,23 @@
     }
   }
 
+  .video-promo {
+    height: 600px;
+    background-image: url('/assets/video-block-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .link-wrapper {
+      @include vertical-center();
+      text-align: center;
+      h2 {
+        color: #ffffff;
+        font-weight: 900;
+        font-family: $ff-open;
+      }
+      a {
+        @include link-color(#ffffff);
+      }
+    }
+  }
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="108px" height="108px" viewBox="0 0 108 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TAKLA-HOME" transform="translate(-625.000000, -3416.000000)">
+            <g id="VIDEO-BLOCK" transform="translate(-102.000000, 3096.000000)">
+                <g id="Group" transform="translate(728.000000, 321.000000)">
+                    <ellipse id="Oval-2" stroke="#FFFFFF" stroke-width="2" cx="53" cy="53" rx="53" ry="53"></ellipse>
+                    <polygon id="Triangle" fill="#FFFFFF" points="36 86 36 22 83 54"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
