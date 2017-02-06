@@ -1,92 +1,83 @@
-#section-phone-slug,
-#section-phone-slug-2 {
-  //Colors
-  $c-background: $c-white;
-  $c-phone: $c-grey-blue;
-  $c-text: $c-grey-blue;
-  $c-breakline: $c-grey;
+/// Call to Action Three to One Layout
+.cta__three-to-one {
+  background-image: url(/assets/cta-bg.jpg);
 
-
-
-  background-color: $c-background;
-  .text {
-    font-family: $ff-lato;
-    font-weight: 700;
-    color: $c-text;
-  }
-
-  .phone-number {
-    font-family: $ff-lato;
-    font-weight: 700;
-    @include link-color($c-phone);
-    a:hover {
-      text-decoration: none;
-    }
-    &:hover {
-      text-decoration: none;
-    }
+  .flex--wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 30px;
+    padding-bottom: 30px;
     @media screen and (max-width: $width-md) {
-      margin-bottom: $spacing-sm;
-    }
-    &--sub {
-      font-weight: 900;
+      flex-direction: column;
+      align-items: center;
     }
   }
-
-  .container {
-    padding-top: $spacing-md;
-    padding-bottom: $spacing-md;
-  }
-
-  .row {
-    @media screen and (min-width: $width-md+1) {
-      display: flex;
-    }
-    .btn {
-      @media screen and (min-width: $width-md+1) {
-        @include vertical-center();
-      }
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
-
-  h3,
-  h5,
-  h6 {
-    line-height: $lh-sm;
-    margin-bottom: 0;
-  }
-  h3 {
+  .flex--item {
+    width: 33%;
     @media screen and (max-width: $width-md) {
-      margin-bottom: $spacing-md;
+      width: 100%;
     }
   }
-  .row:first-child {
-    padding-bottom: $spacing-sm;
-  }
-  .phone-slab__left {
-    border-right: solid 2px $c-breakline;
+
+  .new-patient {
     text-align: right;
-    margin-top: 5px;
+    .text {
+      color: #ffffff;
+      font-family: $ff-josef;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+    }
+    &-number {
+      color: #ffffff;
+      font-family: $ff-mont;
+      font-weight: 700;
+      margin-bottom: 0;
+      line-height: 1;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+      @include font-size(39px, 35px, 30px, 28px, 28px);
+      a { @include link-color(#ffffff) };
+    }
     @media screen and (max-width: $width-md) {
       text-align: center;
-      border-right: none;
-    }
-    @media screen and (max-width: $width-sm) {
-    }
-    @media screen and (max-width: $width-xs) {
+      padding-bottom: 15px;
     }
   }
-  .phone-slab__right {
+
+  .btn {
+    &--wrapper {
+      text-align: center;
+      padding-bottom: 5px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  .existing-patient {
     text-align: left;
+    .text {
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+      font-family: $ff-josef;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+    &-number {
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+      font-family: $ff-mont;
+      font-weight: 700;
+      margin-bottom: 0;
+      line-height: 1;
+      a { @include link-color(#ffffff) };
+    }
     @media screen and (max-width: $width-md) {
       text-align: center;
-      margin-bottom: $spacing-sm;
-    }
-    @media screen and (max-width: $width-sm) {
-    }
-    @media screen and (max-width: $width-xs) {
+      padding-top: 15px;
     }
   }
+
+
 }
