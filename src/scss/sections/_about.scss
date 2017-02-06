@@ -13,6 +13,12 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left top;
+    @media screen and (max-width: $width-md) {
+      background-image: none;
+      img {
+        margin-top: -90px;
+      }
+    }
   }
   .about-nordone--wrapper {
     background-image: url('/assets/team/bio-nordone.jpg');
@@ -20,12 +26,21 @@
     background-repeat: no-repeat;
     background-position: right top;
     border-top: 1px solid #5D7278;
+    @media screen and (max-width: $width-md) {
+      background-image: none;
+      img {
+        margin-top: -90px;
+      }
+    }
   }
   h3 {
     color: #3d893f;
     font-family: $ff-cardo;
     font-weight: 400;
     padding-top: 90px;
+    @media screen and (max-width: $width-md) {
+      padding-top: 15px;
+    }
   }
   p {
     color: #535353;

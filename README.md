@@ -65,8 +65,8 @@ To finish deployment:
 1. Ssh into the webfaction server as dan linn
 2. `cd webapps/projectName_app`
 3. Clone the project with *this directory as the root* (`git clone url .`) 
-4. `yarn install`
-5. `yarn run build`
+4. `npm install`
+5. `npm run build`
 
 ## DNS through Name Cheap
 

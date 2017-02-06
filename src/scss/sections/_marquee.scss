@@ -19,7 +19,7 @@
     h6 {
       font-family: $ff-mont;
       color: #636363;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       margin-bottom: 0;
     }
@@ -32,7 +32,7 @@
       line-height: 1;
     }
     h2 {
-      @include font-size(72px, 65px, 55px, 65px, 65px);
+      @include font-size(72px, 60px, 55px, 65px, 65px);
       color: #3d893f;
       font-weight: 400;
       font-family: $ff-josef;
