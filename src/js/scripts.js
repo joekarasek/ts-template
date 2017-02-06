@@ -171,7 +171,6 @@
       }
     };
     var settings = config || defaultSettings;
-    console.log(settings);
     $(target).owlCarousel(settings);
   };
 
