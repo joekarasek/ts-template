@@ -197,7 +197,7 @@
   HWD.noOrphans('h1,h2,h3,h4,h5,h6,li,p', '.allow-orphan');
   HWD.mailForm('#mail-form', '#success_msg' , '7fb35345-752d-4792-9480-cd3db6674a62');
   HWD.marqueeCarousel(6000);
-  HWD.googleMap('#google-map5', '36.8490793,-76.0278585', '36.8490793,-76.0278585');
+  HWD.googleMap('#google-map5', '33.9527789,-84.337107', '33.9502465,-84.3370638');
   HWD.scrollToFix('#primary-menu');
   HWD.itemCarousel('.js-services-carousel', {
     items: 1,
@@ -252,7 +252,7 @@
     }
   });
   HWD.stopVideoOnModalClose('#videoModal', '#video-one');
-  
+
 
 
 })(jQuery);

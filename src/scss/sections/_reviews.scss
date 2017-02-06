@@ -2,14 +2,14 @@
   background-image: url('/assets/reviews-bg.jpeg');
   background-attachment: fixed;
   @include parallax-background;
-  @media  screen and (max-width: $width-md) {
-    background-attachment: inherit;
-    background-image: none;
-    background-color: $c-grey-orange;
-    h2 {
-      color: $c-grey-blue !important;
-    }
-  }
+  //@media  screen and (max-width: $width-md) {
+  //  background-attachment: inherit;
+  //  background-image: none;
+  //  background-color: $c-grey-orange;
+  //  h2 {
+  //    color: $c-grey-blue !important;
+  //  }
+  //}
 
   .heading {
     padding-top: $spacing-md;
