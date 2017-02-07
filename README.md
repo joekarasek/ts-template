@@ -27,6 +27,9 @@ Build production version of site:
 yarn run build
 ```
 
+## Canvas Documentation
+
+Canvas is an additional html framework the client has asked us to use. It includes several javascript libraries (Flex Slider, Owl Carousel, etc). Documentation can be found [here](http://canvasdoc.bfdig.com/).
 
 ## Sass/Scss and Sass Documentation
 
