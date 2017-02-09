@@ -38,7 +38,12 @@
       line-height: 1;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
       @include font-size(39px, 35px, 30px, 28px, 28px);
-      a { @include link-color(#ffffff) };
+      a {
+        @include link-color(#ffffff);
+        &:hover {
+          text-decoration: none;
+        }
+      };
     }
     @media screen and (max-width: $width-md) {
       text-align: center;
@@ -71,7 +76,12 @@
       font-weight: 700;
       margin-bottom: 0;
       line-height: 1;
-      a { @include link-color(#ffffff) };
+      a {
+        @include link-color(#ffffff);
+        &:hover {
+          text-decoration: none;
+        }
+      };
     }
     @media screen and (max-width: $width-md) {
       text-align: center;

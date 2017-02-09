@@ -61,6 +61,9 @@
     }
     img {
       max-width: 200px;
+      @media screen and (max-width: $width-sm) {
+        display: none;
+      }
     }
     .modal-image {
       text-align: center;
