@@ -5,17 +5,17 @@
 
 
   .heading {
+    text-align: center;
     h2 {
-      color: $c-grey-blue;
+      color: #024378;
       text-align: center;
       margin-bottom: 0;
       padding-top: $spacing-md;
       padding-bottom: $spacing-sm;
-      
+
     }
     p {
       color: $c-grey;
-      font-family: $ff-lato;
       padding-bottom: $spacing-md;
       a {
         @include link-color($c-teal-link);
@@ -24,122 +24,51 @@
     }
   }
 
-  .services {
-    &--slab {
-      min-height: 350px;
-
-      h3 {
-        font-family: $ff-raleway;
-        margin-bottom: $spacing-xs;
-      }
-      p {
-        font-family: $ff-lato;
-        font-weight: 400;
-      }
-      .container {
-        padding-top: $spacing-md;
-        padding-bottom: $spacing-md;
-      }
-      &:nth-child(1) {
-        background-image: url("/assets/services/featured/cosmetic.jpg");
-        @media screen and (max-width: $width-sm) {
-          background-image: none;
-          min-height: 200px;
-        }
-        background-position: right;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-color: $c-teal-2;
-        color: $c-white;
-        h3 {
-          color: $c-white;
-        }
-      }
-      &:nth-child(2) {
-        background-image: url("/assets/services/featured/invisalign.jpg");
-        background-position: left;
-        @media screen and (max-width: $width-sm) {
-          background-image: none;
-          min-height: 200px;
-        }
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-color: $c-grey-yellow;
-        p {
-          color: $c-grey;
-        }
-      }
-      &:nth-child(3) {
-        background-image: url("/assets/services/featured/cerec.jpg");
-        @media screen and (max-width: $width-sm) {
-          background-image: none;
-          min-height: 200px;
-        }
-        background-position: right;
-        background-repeat: no-repeat;
-        background-size: contain;
-        h3 {
-          color: $c-grey-blue;
-        }
-        p {
-          color: $c-grey;
-        }
-      }
+  .services--slab {
+    background-image: url('/assets/Services/cosmetic.jpg');
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    @media screen and (max-width: $width-md) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: #ffffff;
+      background-image: none;
+    }
+    h2 {
+      color: #3d893f;
     }
   }
 
   .services-carousel {
-
-    &--item {
-      &>a {
-        line-height: 0;
-        display: block; 
-      }
-    }
-
-    &--image {
-      @include hover-plus;
-    }
-    &--title {
-      position: absolute;
-      bottom: 5px;
+    h5 {
       text-align: center;
-      width: 100%;
-      z-index: 5;
-      h5 {
-        font-family: $ff-raleway;
-        color: $c-white;
-        margin-bottom: 0;
-      }
-      a {
-        @include link-color($c-white);
-      }
+      color: #024378;
+      font-family: $ff-cardo;
+      font-weight: 700;
     }
+  }
+  .services-carousel--wrapper {
+    padding: 0 60px;
+  }
+  .services-carousel--image {
+    @include hover-plus();
   }
 
   .service-modal-wrapper {
-    & .modal-title {
-      @include h3;
-      font-family: $ff-lato;
-      font-weight: 700;
-      color: $c-black-blue;
-      padding-top: 10px;
+    h5 {
+      margin-bottom: 0;
     }
-    & p {
-      color: $c-black-blue;
-      padding-bottom: 15px;
-    }
-    .modal-image {
-      text-align: center;
-      @media screen and (max-width: $width-md) {
+    img {
+      max-width: 200px;
+      @media screen and (max-width: $width-sm) {
         display: none;
       }
     }
-    img {
-      max-width: 270px;
-      padding-bottom: 20px;
+    .modal-image {
+      text-align: center;
+      margin-bottom: 15px;
     }
   }
-
 
 }

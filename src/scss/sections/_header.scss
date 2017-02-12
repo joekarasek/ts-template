@@ -1,10 +1,20 @@
 #header.full-header {
+  width: 100%;
 
   $c-header: $c-white;
   $c-menu-trigger: $c-black-blue;
 
-  width: 100%;
-  font-family: $ff-lato;
+
+  font-family: $ff-josef;
+  #primary-menu > ul {
+    margin-right: 0;
+    border-right: none;
+    @include nav-color(#707070);
+    @include nav-color(#4A9850, 1);
+    @include nav-color(#0061A3, 2);
+    @include nav-color(#00939A, 3);
+  }
+
   #primary-menu-trigger {
     font-size: 30px;
     pointer-events: auto;
@@ -17,17 +27,10 @@
     padding-right: 0;
     margin-right: 0px;
     border-right: none;
+    padding-left: 30px;
   }
 
-  #primary-menu > ul {
-    margin-right: 0;
-    border-right: none;
 
-    @include nav-color($c-light-grey);
-    @include nav-color($c-btn, 1);
-    @include nav-color($c-dark-teal, 2);
-    @include nav-color($c-teal, 3);
-  }
   
   //when you scroll down
   &.sticky-header {
@@ -56,14 +59,14 @@
 }
 
 #primary-menu ul li > a {
-  font-family: $ff-lato;
+  font-family: $ff-josef;
   font-weight: bold;
   letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 16px;
+  text-transform: none;
+  font-size: 17px;
   padding: 29px 12px;
   @media screen and (max-width: 1300px) {
-    font-size: 15px;
+    font-size: 16px;
     padding: 29px 10px;
     padding-bottom: 10px;
   }

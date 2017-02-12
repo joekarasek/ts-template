@@ -1,40 +1,12 @@
 #section-tour {
-  padding-top: $spacing-xs;
-  background-color: $c-grey-yellow;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: rgba(#7BD2D9, 0.09);
 
-  .container {
-    padding-top: $spacing-lg;
-    padding-bottom: $spacing-lg;
-  }
-
-
-  h2>a {
-    font-family: $ff-raleway;
-    color: $c-black-blue;
-    &:hover {
-      color: $c-black-blue;
-      text-decoration: none;
-    }
-  }
-
-  p {
-    font-family: $ff-lato;
-  }
-
-  p:last-child {
-    margin-bottom: $spacing-md;
-  }
-
-  .btn {
-    @include lr-padding(70px, 60px, 50px, 40px, 40px);
-  }
-
-  .tour-carousel-item {
-    display: none;
-  }
-  .row:last-child {
-    @media screen and (max-width: $width-md) {
-      text-align: center;
+  .heading {
+    h2 {
+      color: #024378;
+      margin-bottom: 0;
     }
   }
 }

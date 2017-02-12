@@ -1,131 +1,159 @@
 #section-specials {
-
-  //Colors
-  $c-heading--main: $c-white;
-  $c-heading--sub: $c-white;
-
-  $c-card--main: $c-white;
-
-
-  .container-wrapper {
-    background-image: url('../../assets/specials-bkgd.jpg');
-    @include parallax-background;
-    padding-top: $spacing-lg;
+  background:url('/assets/specials-bg.jpg');
+  background-size:cover;
+  padding:50px 0;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  @media (max-width:1200px) {
+    background:#FFF;
+    padding-bottom:0;
   }
-
-  .heading {
-    padding-bottom: $spacing-md;
-    h2 {
-      font-family: $ff-raleway;
-      color: $c-heading--main;
-      margin-bottom: 0;
-      line-height: $lh-sm;
-      font-weight: 400;
-      text-shadow: 2px 2px 2px rgba(black, 0.5);
+  h2 {
+    font-weight:400;
+    font-size:36px;
+    color: #024378;
+    margin-bottom: 0;
+    @media (max-width:767px) {
+      text-align:center;
     }
-    h3 {
-      color: $c-heading--sub;
-      font-family: $ff-advent;
-      margin-bottom: 0;
-      line-height: $lh-sm;
-      font-weight: 400;
-      text-shadow: 2px 2px 2px rgba(black, 0.5);
-    }
-  }
-
-  .card {
-    background-color: rgba($c-white, 0.8);
-    text-align: center;
-    height: 100%;
-    border-radius: 0.1px;
-
-    .top {
-      padding-bottom: 65px;
-      h3 {
-        font-family: $ff-lato;
-        color: $c-card--main;
-        margin-bottom: 0;
-        line-height: $lh-xs;
-        padding-top: $spacing-md;
-        font-size: 30px;
-        font-weight: 900;
-        padding-bottom: $spacing-sm;
-      }
+    @media (max-width:480px) {
+      font-size:32px;
     }
 
-    .bottom {
-      .price {
-        margin-top: -65px;
-        position: relative;
-        display: inline-block;
-        border-radius: 10000px;
-        height: 130px;
-        width: 130px;
-        border: 5px solid white;
-      }
-      h1 {
-        color: $c-white;
-        margin-bottom: 0;
-        padding: $spacing-sm;
-        padding-top: 25px;
-        line-height: $lh-xs;
-        font-family: $ff-lato;
-        font-weight: 700;
-        font-size: 72px !important;
-        &:before {
-          content: '$';
-          font-size: 22px;
-          font-weight: 400;
-          position: absolute;
-          top: $spacing-md;
-          left: 10px;
-        }
-
-      }
-      h6:first-child {
-        padding-top: $spacing-md;
-        color: $c-grey;
-        font-weight: 700;
-      }
-      .copy {
-        font-family: $ff-open;
-        padding-left: $spacing-sm;
-        padding-right: $spacing-sm;
-        color: $c-grey;
-      }
-      p {
-        padding-bottom: $spacing-md;
-        color: $c-grey;
-      }
+  }
+  h5 {
+    font-weight:400;
+    font-size: 24px;
+    color: #4A9850;
+    letter-spacing: -0.25px;
+    margin-bottom:30px;
+    @media (max-width:767px) {
+      font-size:20px;
+    }
+    @media (max-width:480px) {
+      font-size:15px;
     }
   }
-  .card-1 .top {  background-color: $c-card1;  }
-  .card-1 .price {  background-color: $c-card1;  }
-  .card-1 .bottom h6 {
-    color: $c-card1;
+  .d-text {
+    font-size:16px;
   }
-  .card-2 .top {  background-color: $c-card2;  }
-  .card-2 .price {  background-color: $c-card2;  }
-  .card-2 .bottom h6 {
-    color: $c-card2;
+  .box {
+    float:left;
+    width:145px;
+    height:145px;
+    background:#F58823;
+    color:#FFF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-right:25px;
+    padding:15px;
+    flex-wrap:wrap;
+    border-radius:9999px;
+    padding-bottom:10px;
   }
-  .card-3 .top {  background-color: $c-card3;  }
-  .card-3 .price {  background-color: $c-card3;  }
-  .card-3 .bottom h6 {
-    color: $c-card3;
+  .save {
+    margin-top:-30px;
+    width:100%;
+    text-align:center;
+    font-size: 16px;
+    font-weight:400;
+    font-style:italic;
+    //font-family:$josefin;
+    color: #FFFFFF;
   }
-  .card-1 h6:first-child {  color: $c-white;  }
-  .card-2 h6:first-child {  color: $c-white;  }
-  .card-3 h6:first-child {  color: $c-white;  }
+  .col-md-6 {
+    padding:0;
+  }
+  .price {
+    font-weight:700;
+    font-size: 68px;
+    color: #FFFFFF;
+    font-family: $ff-mont;
+    letter-spacing: -1.55px;
+    display:flex;
+    align-self:center;
+    justify-content:center;
+  }
+  .dollar {
+    font-weight:400;
+    font-size: 30px;
+    color: #FFFFFF;
+    position:relative;
+    top:-25px;
+    font-family:$ff-mont;
+  }
+  h6 {
+    margin-bottom:10px;
+    margin-top:10px;
+    font-weight:700;
+    font-size: 26px;
+    text-align:left;
+    color:#757575;
+    line-height:30px;
+    font-family: $ff-josef;
+    @media (max-width:767px) {
+      font-size:24px;
+      line-height:24px;
+    }
+    @media (max-width:500px) {
+      font-size:18px;
+    }
+  }
+  p {
+    //font-family: $opensans;
+    font-size: 16px;
+    color: #757575;
+    line-height:23px;
 
+  }
   .row {
-    display: flex;
-    padding-bottom: $spacing-xl;
-    @media screen and (max-width: $width-sm) {
-      display: block;
-      .card {
-        margin-bottom: $spacing-md;
-      }
+    border-bottom: 2px solid #979797;
+    padding-bottom:30px;
+    padding-top:30px;
+
+  }
+  .border-top {
+    border-top:2px solid #979797;
+    padding-top:30px;
+
+  }
+  .box-1 {
+    background:#1D97BF;
+  }
+  .box-2 {
+    background:#49820A;
+  }
+  .box-3 {
+    background:#47477B;
+  }
+  .box-wrap {
+    @media (max-width:767px) {
+      width:100%;
+      display:flex;
+      height:150px;
+      justify-content:center;
     }
   }
+
+}
+
+.specials-mobile-image {
+  img {
+    width:100%;
+  }
+
+}
+
+#section-specials > div > div:nth-child(2) > div:nth-child(4) > h6 {
+  line-height:28px;
+  @media (max-width:500px) {
+    line-height:26px;
+  }
+}
+.form-control {
+  font-size:16px !important;
+}
+.specials-below img {
+  width:100%;
 }

@@ -52,6 +52,7 @@
   display: inline-block;
   position: relative;
   &:hover:after {
+    font-family: serif;
     content: "+";
     position: absolute;
     top: 50%;
@@ -81,6 +82,21 @@
   color: $color;
   &:hover {
     color: $color;
+  }
+}
+
+/// Styling for the Birdeye Reviews Footer
+/// @group reviews
+/// @example #section
+@mixin birdeye-footer() {
+  .bf-dv {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    color: #FFF !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .bf-pro {
+    color: #FFF !important;;
   }
 }
 
@@ -129,5 +145,31 @@
   }
   #header.sticky-header:not(.static-sticky):not(.sticky-style-2):not(.sticky-style-3) #logo img {
     transform: translateY(15%);
+  }
+}
+
+
+/// Social Media Link mixin
+/// @group footer
+/// @param $name - name of the social media site, such as 'google', that matches the html class names
+/// @example #section-footer { @include social-media-link('facebook'); }
+@mixin social-media-link($name) {
+  a.si-#{$name} {
+    display: inline-block;
+    margin-right: 20px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .icon-#{$name} {
+    color: white;
+    font-size: 25px;
+    width: 37px;
+    text-align: center;
+    border-radius: 8px;
+    @media (max-width: $width-sm) {
+      float: none;
+      margin-right: auto;
+    }
   }
 }

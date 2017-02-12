@@ -1,35 +1,101 @@
 #section-about {
 
-  //Colors
-  $c-heading: $c-grey-blue;
-  $c-body: $c-grey;
-  $c-background: $c-grey-orange;
-
-  .marquee-image {
-    img {
-      width: 100%;
+  .heading {
+    h2{
+      color: #024378;
+    }
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .about-priluck--wrapper {
+    background-image: url('/assets/team/bio-priluck.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
+    @media screen and (max-width: $width-md) {
+      background-image: none;
+      img {
+        margin-top: -90px;
+      }
+    }
+  }
+  .about-nordone--wrapper {
+    background-image: url('/assets/team/bio-nordone.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right top;
+    border-top: 1px solid #5D7278;
+    @media screen and (max-width: $width-md) {
+      background-image: none;
+      img {
+        margin-top: -90px;
+      }
+    }
+  }
+  h3 {
+    color: #3d893f;
+    font-family: $ff-cardo;
+    font-weight: 400;
+    padding-top: 90px;
+    @media screen and (max-width: $width-md) {
+      padding-top: 15px;
+    }
+  }
+  p {
+    color: #535353;
+    &:last-child {
+      margin-bottom: 60px;
     }
   }
 
 
-  .about {
-    padding-top: $spacing-md;
-    padding-bottom: $spacing-lg;
-    background-color: $c-background;
-    &__heading {
-      h2 {
-        text-align: center;
-        margin-bottom: $spacing-sm;
-        color: $c-heading;
-        font-family: $ff-raleway;
-      }
+  // team carosuel
+  .section-team-carosuel {
+    background-color: rgba(#DDDDDD, 0.23);
+    h5 {
+      text-align: center;
+      color: #024378;
+      font-family: $ff-cardo;
+      font-weight: 700;
     }
-    &__body {
-      p {
-        color: $c-body;
-        font-family: $ff-lato;
-        font-weight: 400;
-        line-height: 1.4;
+  }
+  .team-carousel--wrapper {
+    padding: 30px 60px;
+  }
+  .image-wrapper {
+    @include hover-plus();
+  }
+
+  .team-modals {
+    h5 {
+      margin-bottom: 0;
+    }
+    img {
+      max-width: 200px;
+    }
+    .modal-image {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+
+  .video-promo {
+    height: 600px;
+    background-image: url('/assets/video-block-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .link-wrapper {
+      @include vertical-center();
+      text-align: center;
+      h2 {
+        color: #ffffff;
+        font-weight: 900;
+        font-family: $ff-open;
+      }
+      a {
+        @include link-color(#ffffff);
       }
     }
   }

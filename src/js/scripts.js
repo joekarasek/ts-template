@@ -3,7 +3,7 @@
   // =============================================
   // ==== Define Hello World Custom Functions ====
   // =============================================
-  
+
   /**
    * @description This object holds standard scripts for needed functionality on all sites including the request appointment form and orphan management.
    * @constructor
@@ -143,7 +143,7 @@
    * @param {object} config optional - an object with custom configuration for the owl carousel. See owl carousel documentation for options.
    * @example HWD.serviceCarousel('js-service-carousel');
    */
-  HelloWorldDevs.prototype.serviceCarousel = function(target, config) {
+  HelloWorldDevs.prototype.itemCarousel = function(target, config) {
     var defaultSettings = {
       items: 1,
       loop: true,
@@ -153,6 +153,7 @@
       autoplayHoverPause:true,
       nav: true,
       dots: false,
+      margin: 40,
       navText: [
         '<i class="icon-chevron-left"></i>',
         '<i class="icon-chevron-right"></i>'
@@ -169,23 +170,88 @@
         }
       }
     };
-    var settings = config ? config : defaultSettings;
+    var settings = config || defaultSettings;
     $(target).owlCarousel(settings);
   };
 
+  /**
+   * Stops videos inside of a modal when that modal is closed (assuming the video is provided by iframe).
+   * @param {string} modalTarget A css selector string
+   * @param {string} videoTarget A css selector string
+   * @example HWD.stopVideoOnModalClose('#videoModal', '#videoIframe');
+   */
+  HelloWorldDevs.prototype.stopVideoOnModalClose = function(modalTarget, videoTarget) {
+    $(modalTarget).on('hidden.bs.modal', function() {
+      var $videoTarget = $(videoTarget);
+      $videoTarget.attr('src', $videoTarget.attr('src'));
+    });
+  };
 
   // =============================================
   // ==== Define Hello World Custom Functions ====
   // =============================================
-  
+
   var HWD = new HelloWorldDevs();
-  
+
   HWD.noOrphans('h1,h2,h3,h4,h5,h6,li,p', '.allow-orphan');
   HWD.mailForm('#mail-form', '#success_msg' , '7fb35345-752d-4792-9480-cd3db6674a62');
   HWD.marqueeCarousel(6000);
-  HWD.googleMap('#google-map5', '36.8490793,-76.0278585', '36.8490793,-76.0278585');
+  HWD.googleMap('#google-map5', '33.9527789,-84.337107', '33.9502465,-84.3370638');
   HWD.scrollToFix('#primary-menu');
-  HWD.serviceCarousel('js-service-carousel');
+  HWD.itemCarousel('.js-services-carousel', {
+    items: 1,
+    loop: true,
+    autoplay: true,
+    autoplaySpeed: 400,
+    autoplayTimeout: 6000,
+    autoplayHoverPause:true,
+    nav: true,
+    dots: false,
+    margin: 40,
+    navText: [
+      '<img src="assets/carousel-arrow.png" alt="navigation arrow">',
+      '<img src="assets/carousel-arrow.png" alt="navigation arrow">'
+    ],
+    responsive: {
+      480: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      992: {
+        items: 4
+      }
+    }
+  });
+  HWD.itemCarousel('.js-team-carousel', {
+    items: 1,
+    loop: true,
+    autoplay: true,
+    autoplaySpeed: 400,
+    autoplayTimeout: 6000,
+    autoplayHoverPause:true,
+    nav: true,
+    dots: false,
+    margin: 40,
+    navText: [
+      '<img src="assets/carousel-arrow.png" alt="navigation arrow">',
+      '<img src="assets/carousel-arrow.png" alt="navigation arrow">'
+    ],
+    responsive: {
+      480: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      992: {
+        items: 4
+      }
+    }
+  });
+  HWD.stopVideoOnModalClose('#videoModal', '#video-one');
+
 
 
 })(jQuery);
