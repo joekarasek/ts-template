@@ -23,7 +23,7 @@ var HelloWorldDevsTysonSteele = (function($,_) {
    * @param {string} uid account number managed by TS
    * @example HWD.mailForm('#mail-form', '#success_msg' , '7fb35345-752d-4792-9480-cd3db6674a62');
    */
-  var mailForm = function (form, success_msg, uid) {
+  var requestAppointment = function (form, success_msg, uid) {
     var $form = $(form);
     $form.submit(function(e) {
       e.preventDefault();
@@ -59,13 +59,17 @@ var HelloWorldDevsTysonSteele = (function($,_) {
    * @param {string} [target='.swiper-container'] css selector for marquee container
    * @example HWD.marqueeCarousel(6000);
    */
-  var marqueeCarousel = function (autoplay, target) {
-    new Swiper( target ? target : '.swiper-container', {
+  var marqueeCarousel = function (customSettings, target) {
+
+    var defaultSettings = {
       speed: 400,
-      autoplay: autoplay ? autoplay : false,
+      autoplay: 6000,
       loop: true,
       autoplayDisableOnInteraction: false
-    });
+    };
+    
+    new Swiper(target || '.swiper-container', _.assign(defaultSettings, customSettings));
+    
   };
 
   /**
@@ -134,10 +138,10 @@ var HelloWorldDevsTysonSteele = (function($,_) {
   /**
    * @description Sets up a standard services carousel that is responsive (starts at 4 items in mobile, goes down to one on mobile). Uses the Owl Carousel
    * @param {string} target css selector of container for owl carousel
-   * @param {object} config optional - an object with custom configuration for the owl carousel. See owl carousel documentation for options.
+   * @param {object} customSettings optional - an object with custom configuration for the owl carousel. See owl carousel documentation for options.
    * @example HWD.serviceCarousel('js-service-carousel');
    */
-  var itemCarousel = function(target, config) {
+  var itemCarousel = function(target, customSettings) {
     var defaultSettings = {
       items: 1,
       loop: true,
@@ -164,8 +168,7 @@ var HelloWorldDevsTysonSteele = (function($,_) {
         }
       }
     };
-    var settings = config || defaultSettings;
-    $(target).owlCarousel(settings);
+    $(target).owlCarousel(_.assign(defaultSettings, customSettings));
   };
 
   /**
@@ -183,7 +186,7 @@ var HelloWorldDevsTysonSteele = (function($,_) {
 
   return {
     noOrphans: noOrphans,
-    mailForm: mailForm,
+    requestAppointment: requestAppointment,
     marqueeCarousel: marqueeCarousel,
     googleMap: googleMap,
     scrollToFix: scrollToFix,
@@ -191,4 +194,4 @@ var HelloWorldDevsTysonSteele = (function($,_) {
     stopVideoModal: stopVideoModal
   };
 
-})(jQuery, lodash);
+})(jQuery, _);
