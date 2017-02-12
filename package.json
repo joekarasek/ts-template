@@ -22,7 +22,7 @@
     "open:jsdoc": "open jsdoc/index.html",
     "build:assets": "cp -r src/assets build/assets",
     "build:js": "cp -r src/js build/js",
-    "build:jsdoc": "documentation build --shallow --output=jsdoc --format='html' src/js/scripts.js",
+    "build:jsdoc": "documentation build --shallow --output=jsdoc --format='html' src/js/hwd.ts.js",
     "build:html": "cp src/index.html build/index.html",
     "build:css": "node-sass --output-style=expanded --source-map-embed src/scss/main.scss build/css/main.css",
     "build:loaders": "cp -r src/assets/loaders build/css/images",
