@@ -13,7 +13,7 @@ yarn start
 ## Usage
 
 Compile resources, open site and documentation, start watches:
-```
+```bash
 yarn start
 ```
 
@@ -31,7 +31,9 @@ yarn run build
 
 Canvas is an additional html framework the client has asked us to use. It includes several javascript libraries (Flex Slider, Owl Carousel, etc). Documentation can be found [here](http://canvasdoc.bfdig.com/).
 
-## Sass/Scss and Sass Documentation
+## Sass/Scss
+
+### Sass/Scss Documentation
 
 Sass/Scss documentation is handled by Sassdoc. See [sassdoc](http://sassdoc.com/) docs at `./sassdoc` (at http://localhost:3002/sassdoc after `yarn start`)
 
@@ -42,7 +44,27 @@ Build Sassdocs:
 yarn run compile:sassdoc
 ```
 
-## JS and JS Documentation
+### Sass/Scss Best Practices
+
+Here are some basic best practices to strive for when working with this template.
+
+## JS 
+
+### Custom Hello World Scripts
+
+Commonly used custom scripts are contained in the HelloWorldDevsTysonSteele object and are included with this template. These scripts handle a wide range of tasks including the request appointment API, management of orphans in the text, and customization of carousels, sliders, videos, and other interactive elements.
+
+For example:
+```javascript
+HelloWorldDevsTysonSteele.marqueeCarousel();
+```
+This script will initialize the marquee slider standard to all the sites we build with default configurations (speed, looping, etc) that match the clients preferences.
+The carousel can still be fully customized by passing in standard configuration options for each given javascript components. For example:
+```javascript
+HelloWorldDevsTysonSteele.marqueeCarousel({ autoplay: false });
+```
+
+### JS Documentation
 
 Javascript documentation is handled by DocumentationJS. See [documenationJS](http://documentation.js.org/) docs at `./jsdoc` (at http://localhost:3002/jsdoc after `yarn start`)
 
