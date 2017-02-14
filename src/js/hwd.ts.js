@@ -55,7 +55,7 @@ var HelloWorldDevsTysonSteele = (function($,_) {
 
   /**
    * @description Instantiate the marquee carousel
-   * @param {number} [autoplay=false] delay on each slide in ms
+   * @param {number} customSettings custom settings object
    * @param {string} [target='.swiper-container'] css selector for marquee container
    * @example HWD.marqueeCarousel(6000);
    */
