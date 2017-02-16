@@ -27,17 +27,33 @@ Build production version of site:
 yarn run build
 ```
 
-## Canvas Documentation
+## Canvas
 
-Canvas is an additional html framework the client has asked us to use. It includes several javascript libraries (Flex Slider, Owl Carousel, etc). Documentation can be found [here](http://canvasdoc.bfdig.com/).
+Canvas is an additional html frontend framework the client has asked us to use. It includes several javascript libraries (Flex Slider, Owl Carousel, etc). This is the base style that the designers at Tyson Steele will be using and we are expected to be able to implement any of the componenets that are featured in Canvas.
+
+### Live Canvas Version 4.3
+
+[Click here](http://canvas.hwdevs.site/) for a live version of Canvas 4.3.
+
+On ocassion Tyson Steele will request that we reference a specific example page of Canvas. All example pages can be found at the above URL. For example, `one-page.html` can be reached at [http://canvas.hwdevs.site/one-page.html](http://canvas.hwdevs.site/one-page.html).
+
+### Canvas Documentation
+
+Canvas's Documentation can be found [here](http://canvasdocs.hwdevs.site/).
+
+##Quality Assurance
+
+Delivering a professional quality product in a timely manner is of utmost importance. To that end, every site built for Tyson Steele by Hello World Devs goes through an internal Quality Assurance process before delivery of the site. This process *must* be done by a developer who was not the main developer for the site. 
 
 ## Sass/Scss
 
 ### Sass/Scss Documentation
 
-Sass/Scss documentation is handled by Sassdoc. See [sassdoc](http://sassdoc.com/) docs at `./sassdoc` (at http://localhost:3002/sassdoc after `yarn start`)
+Sass/Scss documentation is automatically generated during development by Sassdoc. See [sassdoc](http://sassdoc.com/) docs at `./sassdoc` (at http://localhost:3002/sassdoc after `yarn start`)
 
 Add more sassdoc annotations like `/// @param` by seeing [docs here](http://sassdoc.com/annotations).
+
+A number of scss mixins have been created to handle common styling tasks. A full list of these mixins can be found in the Sassdoc documentation. Using these mixins will improve both development time and quality.
 
 Build Sassdocs:
 ```
@@ -47,6 +63,14 @@ yarn run compile:sassdoc
 ### Sass/Scss Best Practices
 
 Here are some basic best practices to strive for when working with this template.
+  - Use as few selectors as possible
+  - Inception rule: no more than 3 'levels' nesting
+  - Avoid generic selectors (ex. `div div`)
+  - Avoid descendants, nth-child, siblings, etc
+  - Avoid ID’s, use classes as much as possible
+  - Stick to one naming convention
+  - Design responsively around Bootstrap's breakpoints
+  - Avoid setting exact heights, allow the content to dictate height
 
 ## JS 
 
@@ -74,7 +98,6 @@ Build JSdocs:
 ```
 yarn run build:jsdoc
 ```
-
 
 ## Deployment to Webfaction
 
