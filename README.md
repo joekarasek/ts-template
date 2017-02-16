@@ -45,6 +45,16 @@ Canvas's Documentation can be found [here](http://canvasdocs.hwdevs.site/).
 
 Delivering a professional quality product in a timely manner is of utmost importance. To that end, every site built for Tyson Steele by Hello World Devs goes through an internal Quality Assurance process before delivery of the site. This process *must* be done by a developer who was not the main developer for the site. 
 
+The QA list can be found [here](http://canvasdocs.hwdevs.site/TS-WEB-CHECKLIST-2016.pdf).
+
+**In addition** to the above checklist...
+
+1) Please test all of our sites on Safari as well as Chrome, Firefox and Edge
+
+2) Also, please - even if you don’t have a large screen/high-res monitor available, create an inspector size for the ultra-wide low-res laptop (sizes to 1366 x 650px) and make another one at 1920 x 950px for those people that think that a 1080p monitor is to be used by expanding the browser window to fit.
+
+These sizes are important add-ons to discover issues with positioning of elements at all sizes. For instance, have a look at this screenshot showing the 1366 x 650px size with the new Sharon Strong website. We’ll have to move up the headline, tighten it up as needed, in order to show the whole reviews button and not cut things off.
+
 ## Sass/Scss
 
 ### Sass/Scss Documentation
