@@ -15,7 +15,7 @@
   HelloWorldDevsTysonSteele.marqueeCarousel({ autoplay: false });
   HelloWorldDevsTysonSteele.itemCarousel('.js-services-carousel', {
     navText: [
-      '<img src="assets/carousel-arrow.png" alt="navigation arrow">',
+      '< img src="assets/carousel-arrow.png" alt="navigation arrow">',
       '<img src="assets/carousel-arrow.png" alt="navigation arrow">'
     ]
   });
