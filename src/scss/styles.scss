@@ -8,7 +8,7 @@
 @import "dependencies/swiper.scss";
 @import "dependencies/font-icons.scss";
 @import "dependencies/dark.scss";
-@import "style.scss";
+@import "dependencies/canvas.scss";
 @import "dependencies/responsive.scss";
 
 
@@ -27,28 +27,28 @@
 //=================================
 
 
-@import "componenets/buttons";
-@import "componenets/backgrounds";
-@import "componenets/fixes";
-@import "componenets/modal";
-@import "componenets/owl-carousel";
-@import "componenets/request-modal";
-@import "componenets/swiper-slider";
+@import "molecules/buttons";
+@import "molecules/backgrounds";
+@import "molecules/fixes";
+@import "molecules/modal";
+@import "molecules/owl-carousel";
+@import "molecules/request-modal";
+@import "molecules/swiper-slider";
 
-@import "sections/about";
-//@import "sections/certificates";
-@import "sections/care-credit";
-@import "sections/footer";
-@import "sections/forms";
-@import "sections/header";
-//@import "sections/insurance";
-@import "sections/location";
-@import "sections/marquee";
-@import "sections/phone-slab";
-@import "sections/reviews";
-@import "sections/specials-2";
-@import "sections/services";
-@import "sections/tour";
+@import "organisms/about";
+//@import "organisms/certificates";
+@import "organisms/care-credit";
+@import "organisms/footer";
+@import "organisms/forms";
+@import "organisms/header";
+//@import "organisms/insurance";
+@import "organisms/location";
+@import "organisms/marquee";
+@import "organisms/phone-slab";
+@import "organisms/reviews";
+@import "organisms/specials-2";
+@import "organisms/services";
+@import "organisms/tour";
 
 
 #bf-revz-widget-2613548623 {
