@@ -3,23 +3,23 @@
 //      Canvas Dependencies
 //=================================
 
-@import "dependencies/animate.scss";
-@import "dependencies/bootstrap.scss";
-@import "dependencies/swiper.scss";
-@import "dependencies/font-icons.scss";
-@import "dependencies/dark.scss";
-@import "dependencies/canvas.scss";
-@import "dependencies/responsive.scss";
+@import "dependencies/animate";
+@import "dependencies/bootstrap";
+@import "dependencies/swiper";
+@import "dependencies/font-icons";
+@import "dependencies/dark";
+@import "dependencies/canvas";
+@import "dependencies/responsive";
 
 
 //=================================
 //           Globals
 //=================================
 
-@import "globals/_vars.scss";
-@import "globals/_mixins.scss";
-@import "globals/_colors.scss";
-@import "globals/_fonts.scss";
+@import "globals/vars";
+@import "globals/mixins";
+@import "globals/colors";
+@import "globals/fonts";
 
 
 //=================================
@@ -49,6 +49,7 @@
 @import "organisms/specials-2";
 @import "organisms/services";
 @import "organisms/tour";
+
 
 
 #bf-revz-widget-2613548623 {

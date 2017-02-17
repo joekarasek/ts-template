@@ -10,11 +10,11 @@ const tasks = {
   clean: [],
   default: [],
 };
-//
+
 tsThemeCore(gulp, config, tasks);
 
-console.log(tasks);
-//
+console.log(config);
+
 gulp.task('clean', gulp.parallel(tasks.clean));
 gulp.task('compile', gulp.series(
     'clean',

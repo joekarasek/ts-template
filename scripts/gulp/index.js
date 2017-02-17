@@ -5,18 +5,18 @@ const defaultConfig = require('./config.default');
 module.exports = (gulp, userConfig, tasks) => {
   const config = _.merge(defaultConfig, userConfig);
 
-  // /* eslint-disable global-require */
+  /* eslint-disable global-require */
   // if (config.browserSync.enabled) {
-  //   require('./lib/browser-sync')(gulp, config, tasks);
+  //   require('./browser-sync')(gulp, config, tasks);
   // }
   //
   // if (config.icons.enabled) {
   //   require('./lib/icons')(gulp, config, tasks);
   // }
   //
-  // if (config.js.enabled) {
-  //   require('./lib/js')(gulp, config, tasks);
-  // }
+  if (config.js.enabled) {
+    require('./js')(gulp, config, tasks);
+  }
   //
   if (config.css.enabled) {
     require('./css')(gulp, config, tasks);
@@ -29,7 +29,7 @@ module.exports = (gulp, userConfig, tasks) => {
   // if (config.drupal.enabled) {
   //   require('./lib/drupal')(gulp, config, tasks);
   // }
-  // /* eslint-enable global-require */
+  /* eslint-enable global-require */
 
   // Instead of `gulp.parallel`, which is what is set in Pattern Lab Starter's `gulpfile.js`, this
   // uses `gulp.series`. Needed to help with the Gulp task dependencies lost going from v3 to v4.

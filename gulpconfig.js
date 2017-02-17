@@ -2,7 +2,7 @@ module.exports = {
   css: {
     enabled: true,
     src: [
-      'src/scss/styles.scss',
+      'src/scss/**/*.scss',
     ],
     dest: 'build/css',
     flattenDestOutput: true,
@@ -28,7 +28,7 @@ module.exports = {
       enabled: true,
       dest: 'sassdoc',
       verbose: false,
-      basePath: 'https://github.com/',
+      basePath: '',
       exclude: [],
       theme: 'default',
       // http://sassdoc.com/customising-the-view/#sort
@@ -40,19 +40,18 @@ module.exports = {
     },
   },
   js: {
-    enabled: false,
+    enabled: true,
     src: [
-      'js/**/*.js',
-      'source/_patterns/**/*.js',
+      './src/js/**/*.js',
     ],
-    dest: 'dest/',
+    dest: './build/js',
     destName: 'script.js',
     sourceMapEmbed: false,
     uglify: false,
     babel: true,
     // Will bundle all bower JS dependencies (not devDeps)
     // creates a `bower_components.min.js` file in `js.dest`.
-    bundleBower: true,
+    bundleBower: false,
     eslint: {
       enabled: true,
       src: [
@@ -64,14 +63,14 @@ module.exports = {
     },
   },
   browserSync: {
-    enabled: false,
+    enabled: true,
     port: 3050,
     watchFiles: [
       'sass'
     ],
     // enable when full CMS is set up
-    domain: 'thp.dev',
-    baseDir: './',
+    domain: '',
+    baseDir: './build',
     startPath: '',
     openBrowserAtStart: true,
     // requires above to be true; allows non-default browser to open
