@@ -7,12 +7,18 @@ This template is designed to get you started building a single page promotional 
 
 - [Dependencies](#dependencies)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
+    - [Usage](#usage)
 - [Resources](#resources)
 - [Canvas](#canvas)
+    - [Live Canvas Version 4.3](#live-canvas-version-4.3)
+    - [Canvas Documentation](#canvas-documentation)
 - [Quality Assurance](#quality-assurance)
 - [Scss](#scss)
+    - [Scss Documentation](#scss-documentation)
+    - [Scss Best Practices](#scss-best-practices)   
 - [JS](#js)
+    - [Custom Scripts](#custom-scripts)
+    - [JS Documentation](#js-documentation)
 - [Deployment](#deployment-to-webfaction)
 - [DNS through Name Cheap](#dns-through-name-cheap)
 - [Troubleshooting](#troubleshooting)
@@ -25,12 +31,14 @@ This template is designed to get you started building a single page promotional 
 
 ## Getting Started
 
+All the tools you need to set up a working development environment including compiling and watches on files is handled by Node.js and Yarn (or if you prefer, npm).
+
 ```
 yarn install
 yarn start
 ```
 
-## Usage
+### Usage
 
 Compile resources, open site and documentation, start watches:
 ```bash
@@ -96,9 +104,9 @@ The QA list can be found [here](http://canvasdocs.hwdevs.site/TS-WEB-CHECKLIST-2
 
 These sizes are important add-ons to discover issues with positioning of elements at all sizes. For instance, have a look at this screenshot showing the 1366 x 650px size with the new Sharon Strong website. We’ll have to move up the headline, tighten it up as needed, in order to show the whole reviews button and not cut things off.
 
-## Sass/Scss
+## Scss
 
-### Sass/Scss Documentation
+### Scss Documentation
 
 Sass/Scss documentation is automatically generated during development by Sassdoc. See [sassdoc](http://sassdoc.com/) docs at `./sassdoc` (at http://localhost:3002/sassdoc after `yarn start`)
 
@@ -111,7 +119,7 @@ Build Sassdocs:
 yarn run compile:sassdoc
 ```
 
-### Sass/Scss Best Practices
+### Scss Best Practices
 
 Here are some basic best practices to strive for when working with this template.
   - Use as few selectors as possible
@@ -125,7 +133,7 @@ Here are some basic best practices to strive for when working with this template
 
 ## JS 
 
-### Custom Hello World Scripts
+### Custom Scripts
 
 Commonly used custom scripts are contained in the HelloWorldDevsTysonSteele object and are included with this template. These scripts handle a wide range of tasks including the request appointment API, management of orphans in the text, and customization of carousels, sliders, videos, and other interactive elements.
 
