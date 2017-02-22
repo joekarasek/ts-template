@@ -1,7 +1,27 @@
-# Template for Tyson Steele
+#Template for Tyson Steele
 
 ## Description
 This template is designed to get you started building a single page promotional website for Tyson Steele and Associates. It includes several resources including external resources (Canvas HTML5 Template, Bootstrap, jQuery), a suite of development, build, and deployment tools using Gulp, useful scss mixins, and documentation. 
+
+## Table of Contents
+
+- [Dependencies](#dependencies)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Resources](#resources)
+- [Canvas](#canvas)
+- [Quality Assurance](#quality-assurance)
+- [Scss](#scss)
+- [JS](#js)
+- [Deployment](#deployment-to-webfaction)
+- [DNS through Name Cheap](#dns-through-name-cheap)
+- [Troubleshooting](#troubleshooting)
+
+
+## Dependencies
+
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/) (or [npm](https://www.npmjs.com/) if you prefer)
 
 ## Getting Started
 
@@ -27,6 +47,25 @@ Build production version of site:
 yarn run build
 ```
 
+# Resources
+
+Here is a list of useful links to documentation pertaining to various components that are used through out these sites, as well as links to articles on best practices, documention for development tools, and links for hosting draft versions of the site.
+
+- [Bootstrap](http://getbootstrap.com/) - Included with Canvas, great for laying out content and handling things such as modals, buttons, and the navbar
+- [Canvas Documentation](http://canvasdocs.hwdevs.site/) - Canvas Documentation
+- [Canvas Template](http://canvas.hwdevs.site/) - A live version of the current Canvas Template
+- [Css/Scss Best Practices](https://css-tricks.com/sass-style-guide/) - A useful guide for best practices when working with style sheets
+- [documenationJS](http://documentation.js.org/) - Generates live documentation of javascript based on inline comments
+- [flexSlider](http://flexslider.woothemes.com/) - Used for most of the marquee sliders
+- [Font Awesome Icons](http://fontawesome.io/) - Included with Canvas and used for many icons
+- [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial) - Documentation for working with the javascript API for Gooogle Maps
+- [Javascript Best Practices](https://www.thinkful.com/learn/javascript-best-practices-1/) - Thoughts on best practices for writing javascript
+- [Name Cheap](https://www.namecheap.com/) - DNS service for the delivering drafts to Tyson Steele
+- [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html) - Used for most carousels
+- [Sassdoc](http://sassdoc.com/) - Generates live documentation of stylesheets based on inline comments
+- [Webfaction](https://www.webfaction.com/) - The hosting services for delivering drafts to Tyson Steele
+- [Html Validation](https://validator.w3.org) - Validator for html errors
+
 ## Canvas
 
 Canvas is an additional html frontend framework the client has asked us to use. It includes several javascript libraries (Flex Slider, Owl Carousel, etc). This is the base style that the designers at Tyson Steele will be using and we are expected to be able to implement any of the componenets that are featured in Canvas.
@@ -49,9 +88,11 @@ The QA list can be found [here](http://canvasdocs.hwdevs.site/TS-WEB-CHECKLIST-2
 
 **In addition** to the above checklist...
 
-1) Please test all of our sites on Safari as well as Chrome, Firefox and Edge
+1) Run the html through an [HTML validator](https://validator.w3.org)
 
-2) Also, please - even if you don’t have a large screen/high-res monitor available, create an inspector size for the ultra-wide low-res laptop (sizes to 1366 x 650px) and make another one at 1920 x 950px for those people that think that a 1080p monitor is to be used by expanding the browser window to fit.
+2) Please test all of our sites on Safari as well as Chrome, Firefox and Edge
+
+3) Also, please - even if you don’t have a large screen/high-res monitor available, create an inspector size for the ultra-wide low-res laptop (sizes to 1366 x 650px) and make another one at 1920 x 950px for those people that think that a 1080p monitor is to be used by expanding the browser window to fit.
 
 These sizes are important add-ons to discover issues with positioning of elements at all sizes. For instance, have a look at this screenshot showing the 1366 x 650px size with the new Sharon Strong website. We’ll have to move up the headline, tighten it up as needed, in order to show the whole reviews button and not cut things off.
 
@@ -111,7 +152,7 @@ yarn run build:jsdoc
 
 ## Deployment to Webfaction
 
-These sites are hosted through [Webfaction](https://www.webfaction.com/) with DNS handled by [Name Cheap](https://www.namecheap.com/).
+These sites are hosted through [Webfaction](https://www.webfaction.com/).
 
 The deployment scripts are not currently complete, but will take care of configuring the webfaction server for you.
 ```
