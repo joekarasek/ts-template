@@ -10,7 +10,7 @@ This template is designed to get you started building a single page promotional 
     - [Usage](#usage)
 - [Resources](#resources)
 - [Canvas](#canvas)
-    - [Live Canvas Version 4.3](#live-canvas-version-4.3)
+    - [Live Canvas Version 4.3](#live-canvas-version-4)
     - [Canvas Documentation](#canvas-documentation)
 - [Quality Assurance](#quality-assurance)
 - [Scss](#scss)
@@ -78,7 +78,7 @@ Here is a list of useful links to documentation pertaining to various components
 
 Canvas is an additional html frontend framework the client has asked us to use. It includes several javascript libraries (Flex Slider, Owl Carousel, etc). This is the base style that the designers at Tyson Steele will be using and we are expected to be able to implement any of the componenets that are featured in Canvas.
 
-### Live Canvas Version 4.3
+### Live Canvas Version 4
 
 [Click here](http://canvas.hwdevs.site/) for a live version of Canvas 4.3.
 
