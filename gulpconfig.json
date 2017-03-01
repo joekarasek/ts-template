@@ -1,10 +1,19 @@
 {
-  "snippets": {
-    "scriptTag": "<!-- Scripts -->\n",
-    "cssTag": "<!-- CSS -->\n\t",
-    "index": "test"
+  "broswerSync": {
+    "enabled": false,
   },
-  "baseDir": "site/",
-  "mainScss": "site/scss/main.scss",
-  "build": "build/"
+  "css": {
+    "enabled": true,
+    "source": "src/scss/main.scss",
+    "dest": "src/css/",
+  },
+  "docs": {
+    "enabled": false,
+  },
+  "js": {
+    "enabled": false,
+  },
+  "validate": {
+    "enabled": false,
+  },
 }

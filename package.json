@@ -9,7 +9,7 @@
     "browser-sync": "^2.17.5",
     "del": "^2.2.2",
     "fs": "0.0.1-security",
-    "gulp": "^3.9.1",
+    "gulp": "gulpjs/gulp#4.0",
     "gulp-cache": "^0.4.5",
     "gulp-cssnano": "^2.1.2",
     "gulp-html": "^0.4.4",
