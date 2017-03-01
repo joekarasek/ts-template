@@ -50,7 +50,9 @@
 @import "sections/services";
 @import "sections/tour";
 
-
+body {
+  background-color: black !important;
+}
 #bf-revz-widget-2613548623 {
   @media screen and (max-width: 400px) {
     max-height: 350px;
