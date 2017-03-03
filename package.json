@@ -7,6 +7,7 @@
     "gulp": "gulp",
     "gulp:compile": "gulp compile",
     "gulp:clean": "gulp clean",
+    "gulp:validate": "gulp validate",
     "gulp:tasks": "gulp --tasks"
   },
   "devDependencies": {
@@ -15,7 +16,7 @@
     "del": "^2.2.2",
     "fs": "0.0.1-security",
     "gulp": "gulpjs/gulp#4.0",
-    "gulp-cache": "^0.4.5",
+    "gulp-cached": "^1.1.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-html": "^0.4.4",
     "gulp-htmlhint": "^0.3.1",
@@ -29,6 +30,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-sass-glob": "tomgrooffer/gulp-sass-glob#99d06af",
     "gulp-sourcemaps": "^2.4.1",
+    "gulp-stylelint": "^3.2.0",
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.2",
     "gulp.spritesmith": "^6.2.1",
