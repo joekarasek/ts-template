@@ -7,6 +7,7 @@ const flatten = require('gulp-flatten');
 const gulpif = require('gulp-if');
 const cached = require('gulp-cached');
 const join = require('path').join;
+const sassdoc = require('sassdoc');
 const sassGlob = require('gulp-sass-glob');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
@@ -17,26 +18,26 @@ module.exports = (gulp, config, tasks) => {
 
   function compileScss(done) {
     gulp.src(config.css.source)
-      .pipe(sassGlob())
-      .pipe(sourcemaps.init({}))
-      .pipe(sass({
+        .pipe(sassGlob())
+        .pipe(sourcemaps.init({}))
+        .pipe(sass({
           outputStyle: config.css.outputStyle,
           sourceComments: config.css.sourceComments,
           includePaths: config.css.includePaths,
-      }).on('error', sass.logError))
-      .pipe(postcss(
-          [
-            autoprefixer({
-              browsers: config.css.autoPrefixerBrowsers,
-            }),
-          ]
-      ))
-      .pipe(sourcemaps.write((config.css.sourceMap) ? './' : null))
-      .pipe(gulpif(config.css.flattenOutput, flatten()))
-      .pipe(gulp.dest(config.css.dest))
-      .on('end', () => {
+        }).on('error', sass.logError))
+        .pipe(postcss(
+            [
+              autoprefixer({
+                browsers: config.css.autoPrefixerBrowsers,
+              }),
+            ]
+        ))
+        .pipe(sourcemaps.write((config.css.sourceMap) ? './' : null))
+        .pipe(gulpif(config.css.flattenOutput, flatten()))
+        .pipe(gulp.dest(config.css.dest))
+        .on('end', () => {
       done();
-    });
+  });
   };
   compileScss.description = 'Compile Scss from source to dest, including sourcemap, autoprefixer, and flatten';
   gulp.task('scss', done => compileScss(done));
@@ -53,17 +54,38 @@ module.exports = (gulp, config, tasks) => {
 
   function validateCss() {
     return gulp.src(config.css.source)
-      .pipe(cached('validate:css'))
-      .pipe(stylelint({
-        failAfterError: false,
-        reporters: [
-          { formatter: 'string', console: true },
-        ],
-    }));
+        .pipe(cached('validate:css'))
+        .pipe(stylelint({
+          failAfterError: false,
+          reporters: [
+            { formatter: 'string', console: true },
+          ],
+        }));
   };
   validateCss.description = 'Lint Scss';
   gulp.task('validate:css', () => validateCss());
   tasks.validate.push('validate:css');
+
+
+  function docsCss() {
+    return gulp.src(config.css.sassdoc.source)
+        .pipe(sassdoc({
+          dest: config.css.sassdoc.dest,
+          verbose: config.css.sassdoc.verbose,
+          exclude: config.css.sassdoc.exclude,
+        }));
+  };
+  docsCss.description = 'Build CSS docs using SassDoc';
+  gulp.task('docs:sassdoc', docsCss);
+  gulp.task('clean:docs:sassdoc', (done) => {
+    del([config.css.sassdoc.dest]).then(() => {
+      done();
+    });
+  });
+  if (config.css.sassdoc.enabled) {
+    tasks.compile.push('docs:sassdoc');
+    tasks.clean.push('clean:docs:sassdoc');
+  }
 
 };
 
