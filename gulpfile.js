@@ -13,20 +13,22 @@ const tasks = {
 
 hwdGulpCore(gulp, config, tasks);
 
+console.log(tasks);
 console.log(config);
 
-gulp.task('clean', gulp.parallel(tasks.clean));
-gulp.task('compile', gulp.series(
-    'clean',
-    gulp.series(tasks.compile)
-));
-gulp.task('validate', gulp.parallel(tasks.validate));
-gulp.task('watch', gulp.parallel(tasks.watch));
-tasks.default.push('watch');
-gulp.task('default', gulp.series(
-    'compile',
-    gulp.parallel(tasks.default)
-));
+gulp.task('compile', gulp.series(tasks.compile));
+// gulp.task('clean', gulp.parallel(tasks.clean));
+// gulp.task('compile', gulp.series(
+//     'clean',
+//     gulp.series(tasks.compile)
+// ));
+// gulp.task('validate', gulp.parallel(tasks.validate));
+// gulp.task('watch', gulp.parallel(tasks.watch));
+// tasks.default.push('watch');
+// gulp.task('default', gulp.series(
+//     'compile',
+//     gulp.parallel(tasks.default)
+// ));
 
 
 // const cache = require('gulp-cache');
