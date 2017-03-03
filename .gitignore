@@ -10,6 +10,10 @@ npm-debug.log
 node_modules
 sassdoc
 
+# Compiled Scss
+src/css/main.css
+src/css/main.css.map
+
 
 # Security and Deployment Configuration
 .htaccess
