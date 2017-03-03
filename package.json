@@ -3,7 +3,11 @@
   "author": "Hello World Devs",
   "version": "1.0.0",
   "main": "gulpfile.js",
-  "scripts": {},
+  "scripts": {
+    "gulp": "gulp",
+    "gulp:compile": "gulp compile",
+    "gulp:tasks": "gulp --tasks"
+  },
   "devDependencies": {
     "autoprefixer": "^6.7.5",
     "browser-sync": "^2.17.5",
