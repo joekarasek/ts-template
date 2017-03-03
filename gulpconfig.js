@@ -15,10 +15,14 @@ module.exports = {
       'last 2 versions',
       'IE >= 10',
     ],
-    flattenOutput: true, 
-  },
-  docs: {
-    "enabled": false,
+    flattenOutput: true,
+    sassdoc: {
+      enabled: true,
+      source: 'src/scss/**/*.scss',
+      dest: 'sassdoc',
+      verbose: false,
+      exclude: [],
+    },
   },
   js: {
     "enabled": false,
