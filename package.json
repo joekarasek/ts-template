@@ -39,7 +39,8 @@
     "merge-stream": "^1.0.0",
     "postcss": "^5.2.15",
     "prompt": "^1.0.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "sassdoc": "^2.1.19"
   },
   "description": ""
 }
