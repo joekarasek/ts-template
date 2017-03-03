@@ -2,7 +2,6 @@
 const gulp        = require('gulp');
 const config      = require('./gulpconfig.js');
 const hwdGulpCore = require('./scripts/hwdGulpCore/index.js');
-
 const tasks = {
   compile: [],
   watch: [],

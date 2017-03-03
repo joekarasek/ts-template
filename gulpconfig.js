@@ -4,12 +4,17 @@ module.exports = {
   },
   css: {
     enabled: true,
-    source: "src/scss/main.scss",
-    includePaths: [],
+    source: [
+        "src/scss/**/*.scss",
+    ],
+    includePaths: [
+        "src/canvas/scss/",
+    ],
     dest: "src/css/",
+    lint: true,
     // outputStyles maybe 'expanded' or 'compressed'
     outputStyle: "expanded",
-    sourceMap: true,
+    sourceMap: false,
     sourceComments: false,
     autoPrefixerBrowsers: [
       'last 2 versions',
@@ -18,7 +23,6 @@ module.exports = {
     flattenOutput: true,
     sassdoc: {
       enabled: true,
-      source: 'src/scss/**/*.scss',
       dest: 'sassdoc',
       verbose: false,
       exclude: [],
