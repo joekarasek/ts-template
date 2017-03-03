@@ -1,5 +1,7 @@
 'use strict';
+const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync');
+const postcss = require('gulp-postcss');
 const sassGlob = require('gulp-sass-glob');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
@@ -16,6 +18,13 @@ module.exports = (gulp, config, tasks) => {
           includePaths: config.css.includePaths,
       }))
       .pipe(sourcemaps.write((config.css.sourceMap) ? './' : null))
+      .pipe(postcss(
+          [
+            autoprefixer({
+              browsers: config.css.autoPrefixerBrowsers,
+            }),
+          ]
+      ))
       .pipe(gulp.dest(config.css.dest))
       .on('end', () => {
       done();
@@ -36,7 +45,6 @@ module.exports = (gulp, config, tasks) => {
 // const stylelint = require('gulp-stylelint');
 // const postcss = require('gulp-postcss');
 // const cached = require('gulp-cached');
-// const autoprefixer = require('autoprefixer');
 // const plumber = require('gulp-plumber');
 // const notify = require('gulp-notify');
 // const flatten = require('gulp-flatten');

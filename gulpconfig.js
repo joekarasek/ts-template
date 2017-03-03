@@ -12,6 +12,10 @@ module.exports = {
     // Enable the next two only for trouble shooting purposed
     sourceComments: false,
     sourceMap: false,
+    autoPrefixerBrowsers: [
+      'last 2 versions',
+      'IE >= 10',
+    ],
   },
   docs: {
     "enabled": false,
