@@ -9,10 +9,7 @@ module.exports = (gulp, config, tasks) => {
       .src(config.css.source)
       .pipe(sass())
       .pipe(gulp.dest(config.css.dest))
-      .pipe(browserSync.reload({
-        stream: true
-        })
-      ).on('end', () => {
+      .on('end', () => {
       done();
     });
   }
