@@ -15,7 +15,16 @@ const stylelint = require('gulp-stylelint');
 
 module.exports = (gulp, config, tasks) => {
 
-
+  /**
+   * Compiles Scss with the following steps:
+   * 1. Glob the Sass
+   * 2. compile scss
+   * 3. run compiled scss through autoprefixer for browser support
+   * 4. produce source maps
+   * 5. flatten output
+   * Adds 'compile:scss' to tasks.compile
+   * @param done
+   */
   function compileScss(done) {
     gulp.src(config.css.source)
         .pipe(sassGlob())
@@ -43,7 +52,20 @@ module.exports = (gulp, config, tasks) => {
   gulp.task('compile:scss', done => compileScss(done));
   tasks.compile.push('compile:scss');
 
-
+  /**
+   * Removes *.css and *.css.map from the the dest
+   * Adds 'clean:css' to tasks.clean
+   * @param done
+   */
+  function cleanCss(done) {
+    del(
+      [
+        join(config.css.dest, '*.{css,css.map}'),
+      ],
+      { force: true }
+    )
+        .then(() => { done(); });
+  }
   gulp.task('clean:css', (done) => {
     del([
       join(config.css.dest, '*.{css,css.map}'),
@@ -51,7 +73,10 @@ module.exports = (gulp, config, tasks) => {
   });
   tasks.clean.push('clean:css');
 
-
+  /**
+   * Runs source scss through stylelint using settings in `.stylelinerc.js`
+   * Adds 'validate:css' to tasks.validate
+   */
   function validateCss() {
     return gulp.src(config.css.source)
         .pipe(cached('validate:css'))
@@ -68,6 +93,12 @@ module.exports = (gulp, config, tasks) => {
     tasks.validate.push('validate:css');
   }
 
+  /**
+   * Builds documentation from scss using sassdoc
+   * See http://sassdoc.com/ for more information
+   * Adds 'docs:sassdoc' to tasks.compile
+   * Also adds 'clean:docs:sassdoc' to tasks.clean
+   */
   function docsCss() {
     return gulp.src(config.css.source)
         .pipe(sassdoc({
@@ -88,13 +119,21 @@ module.exports = (gulp, config, tasks) => {
     tasks.clean.push('clean:docs:sassdoc');
   }
 
+  /**
+   * Create gulp watch for scss source
+   * On file change, triggers the following tasks
+   * 1. 'compile:scss'
+   * 2. 'docs:sassdoc' if enabled
+   * 3. 'validate:css' if enabled
+   * Adds 'watch:css' to tasks.watch
+   */
   function watchCss() {
     const watchTasks = [compileScss];
     if (config.css.lint) {
       watchTasks.push(validateCss);
     }
     if (config.css.sassdoc.enabled) {
-      watchTasks.push('docs:css');
+      watchTasks.push('docs:sassdoc');
     }
     return gulp.watch(config.css.source, gulp.parallel(watchTasks));
   }
