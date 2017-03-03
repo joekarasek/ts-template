@@ -9,13 +9,13 @@ module.exports = {
     dest: "src/css/",
     // outputStyles maybe 'expanded' or 'compressed'
     outputStyle: "expanded",
-    // Enable the next two only for trouble shooting purposed
+    sourceMap: true,
     sourceComments: false,
-    sourceMap: false,
     autoPrefixerBrowsers: [
       'last 2 versions',
       'IE >= 10',
     ],
+    flattenOutput: true, 
   },
   docs: {
     "enabled": false,
