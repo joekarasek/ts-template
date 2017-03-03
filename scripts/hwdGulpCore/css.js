@@ -1,13 +1,21 @@
 'use strict';
 const browserSync = require('browser-sync');
+const sassGlob = require('gulp-sass-glob');
 const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
 
 module.exports = (gulp, config, tasks) => {
 
   function compileScss(done) {
-    gulp
-      .src(config.css.source)
-      .pipe(sass())
+    gulp.src(config.css.source)
+      .pipe(sassGlob())
+      .pipe(sourcemaps.init({}))
+      .pipe(sass({
+          outputStyle: config.css.outputStyle,
+          sourceComments: config.css.sourceComments,
+          includePaths: config.css.includePaths,
+      }))
+      .pipe(sourcemaps.write((config.css.sourceMap) ? './' : null))
       .pipe(gulp.dest(config.css.dest))
       .on('end', () => {
       done();
@@ -24,6 +32,7 @@ module.exports = (gulp, config, tasks) => {
 // const sassGlob = require('gulp-sass-glob');
 // const sourcemaps = require('gulp-sourcemaps');
 // const sass = require('gulp-sass');
+
 // const stylelint = require('gulp-stylelint');
 // const postcss = require('gulp-postcss');
 // const cached = require('gulp-cached');
