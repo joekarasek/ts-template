@@ -16,12 +16,11 @@ hwdGulpCore(gulp, config, tasks);
 console.log(tasks);
 console.log(config);
 
-gulp.task('compile', gulp.series(tasks.compile));
-// gulp.task('clean', gulp.parallel(tasks.clean));
-// gulp.task('compile', gulp.series(
-//     'clean',
-//     gulp.series(tasks.compile)
-// ));
+gulp.task('clean', gulp.parallel(tasks.clean));
+gulp.task('compile', gulp.series(
+    'clean',
+    gulp.series(tasks.compile)
+));
 // gulp.task('validate', gulp.parallel(tasks.validate));
 // gulp.task('watch', gulp.parallel(tasks.watch));
 // tasks.default.push('watch');
@@ -62,28 +61,6 @@ gulp.task('compile', gulp.series(tasks.compile));
 //   })
 // });
 //
-// gulp.task('sass', function(){
-//   return gulp.src(config.mainScss)   // Converts main.scss to css file.
-//       .pipe(sass())
-//       .pipe(gulp.dest(config.baseDir + 'css'))
-//       .pipe(browserSync.reload({
-//         stream: true
-//       }));
-// });
-//
-// gulp.task('autoprefixer', function () {
-//   var postcss      = require('gulp-postcss');
-//   var sourcemaps   = require('gulp-sourcemaps');
-//   var autoprefixer = require('autoprefixer');
-//
-//   return gulp.src(config.baseDir + 'css/main.css')
-//       .pipe(sourcemaps.init())
-//       .pipe(postcss([ autoprefixer() ]))
-//       .pipe(sourcemaps.write('.'))
-//       .pipe(gulp.dest(config.baseDir + 'css/'));
-// });
-//
-// gulp.task('sass-prefix', function() {runSequence('sass', 'autoprefixer')});
 //
 // gulp.task('useref', function() {                // Useref is used for concatinating between two snippets in index.html file.
 //   return gulp.src(config.baseDir + 'index.html')
@@ -170,11 +147,6 @@ gulp.task('compile', gulp.series(tasks.compile));
 //       callback
 //   );
 // });
-//
-// gulp.task('clean:dist', function() { // Completely deletes dist folder
-//   return del.sync(config.build);
-// });
-//
 //
 // gulp.task('cache:clear', function(callback) { // Clears cache of project
 //   return cache.clearAll(callback)

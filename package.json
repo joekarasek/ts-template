@@ -6,6 +6,7 @@
   "scripts": {
     "gulp": "gulp",
     "gulp:compile": "gulp compile",
+    "gulp:clean": "gulp clean",
     "gulp:tasks": "gulp --tasks"
   },
   "devDependencies": {

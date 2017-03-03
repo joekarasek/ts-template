@@ -1,9 +1,11 @@
 'use strict';
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync');
+const del = require('del');
 const postcss = require('gulp-postcss');
 const flatten = require('gulp-flatten');
 const gulpif = require('gulp-if');
+const join = require('path').join;
 const sassGlob = require('gulp-sass-glob');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
@@ -37,6 +39,14 @@ module.exports = (gulp, config, tasks) => {
   gulp.task('scss', done => compileScss(done));
   tasks.compile.push('scss');
 
+  gulp.task('clean:css', (done) => {
+    del([
+      join(config.css.dest, '*.{css,css.map}'),
+    ], { force: true }).then(() => { done(); });
+  });
+  tasks.clean.push('clean:css');
+
+
 };
 
 
@@ -58,6 +68,45 @@ module.exports = (gulp, config, tasks) => {
 // // const debug = require('gulp-debug');
 //
 // module.exports = (gulp, config, tasks) => {
+//   function cssCompile(done, errorShouldExit) {
+//     gulp.src(config.css.src)
+//         .pipe(sassGlob())
+//         .pipe(plumber({
+//           errorHandler(error) {
+//             notify.onError({
+//               title: 'CSS <%= error.name %> - Line <%= error.line %>',
+//               message: '<%= error.message %>',
+//             })(error);
+//             if (errorShouldExit) process.exit(1);
+//             this.emit('end');
+//           },
+//         }))
+//         .pipe(sourcemaps.init({
+//           debug: config.debug,
+//         }))
+//         .pipe(sass({
+//           outputStyle: config.css.outputStyle,
+//           sourceComments: config.css.sourceComments,
+//           includePaths: config.css.includePaths,
+//         }).on('error', sass.logError))
+//         .pipe(postcss(
+//             [
+//               autoprefixer({
+//                 browsers: config.css.autoPrefixerBrowsers,
+//               }),
+//             ]
+//         ))
+//         .pipe(sourcemaps.write((config.css.sourceMapEmbed) ? null : './'))
+//         .pipe(gulpif(config.css.flattenDestOutput, flatten()))
+//         .pipe(gulp.dest(config.css.dest))
+//         .on('end', () => {
+//       done();
+//   });
+//   }
+//
+//   cssCompile.description = 'Compile Scss to CSS using Libsass with Autoprefixer and SourceMaps';
+//
+//   gulp.task('css', done => cssCompile(done, true));
 //
 //   gulp.task('clean:css', (done) => {
 //     del([
