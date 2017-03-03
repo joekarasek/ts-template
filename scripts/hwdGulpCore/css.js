@@ -2,7 +2,7 @@
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 
-model.exports = (gulp, config, tasks) => {
+module.exports = (gulp, config, tasks) => {
 
   function compileScss(done) {
     gulp
@@ -12,10 +12,12 @@ model.exports = (gulp, config, tasks) => {
       .pipe(browserSync.reload({
         stream: true
         })
-      );
+      ).on('end', () => {
+      done();
+    });
   }
   compileScss.description = 'Compile Scss from source to dest';
-  gulp.task('scss', compileScss(done));
+  gulp.task('scss', done => compileScss(done));
   tasks.compile.push('scss');
 
 };

@@ -1,7 +1,7 @@
 'use strict';
 const browserSync = require('browser-sync');
 
-module.exports = (gulp, userConfig, tasks) => {
+module.exports = (gulp, config, tasks) => {
 
   if (config.browserSync.enabled) {
     require('./browserSync')(gulp, config, tasks);
@@ -18,8 +18,7 @@ module.exports = (gulp, userConfig, tasks) => {
   if (config.validate.enabled) {
     require('./validate')(gulp, config, tasks);
   }
-
-
+  
   if (config.docs.enabled) {
     require('./docs')(gulp, config, tasks);
   }

@@ -1,5 +1,5 @@
-{
-  "broswerSync": {
+module.exports = {
+  "browserSync": {
     "enabled": false,
   },
   "css": {
@@ -16,4 +16,4 @@
   "validate": {
     "enabled": false,
   },
-}
+};
