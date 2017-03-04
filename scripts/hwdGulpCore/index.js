@@ -11,9 +11,9 @@ module.exports = (gulp, config, tasks) => {
     require('./css')(gulp, config, tasks);
   }
   //
-  // if (config.js.enabled) {
-  //   require('./js')(gulp, config, tasks);
-  // }
+  if (config.js.enabled) {
+    require('./js')(gulp, config, tasks);
+  }
   //
   // if (config.validate.enabled) {
   //   require('./validate')(gulp, config, tasks);

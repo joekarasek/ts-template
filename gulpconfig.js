@@ -5,15 +5,15 @@ module.exports = {
   css: {
     enabled: true,
     source: [
-        "src/scss/**/*.scss",
+        'src/scss/**/*.scss',
     ],
     includePaths: [
-        "src/canvas/scss/",
+        'src/canvas/scss/',
     ],
-    dest: "src/css/",
+    dest: 'src/css/',
     lint: true,
     // outputStyles maybe 'expanded' or 'compressed'
-    outputStyle: "expanded",
+    outputStyle: 'expanded',
     sourceMap: false,
     sourceComments: false,
     autoPrefixerBrowsers: [
@@ -29,7 +29,14 @@ module.exports = {
     },
   },
   js: {
-    "enabled": false,
+    enabled: true,
+    source: 'src/js/*.js',
+    dest: 'src/js/',
+    destFileName: 'main.js',
+    babel: false,
+    uglify: false,
+    sourceMap: false,
+    includePaths: [],
   },
   validate: {
     enabled: false,
