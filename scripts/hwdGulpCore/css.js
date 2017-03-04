@@ -1,6 +1,5 @@
 'use strict';
 const autoprefixer = require('autoprefixer');
-const browserSync = require('browser-sync');
 const del = require('del');
 const postcss = require('gulp-postcss');
 const flatten = require('gulp-flatten');

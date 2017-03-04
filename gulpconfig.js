@@ -56,4 +56,10 @@ module.exports = {
       format: 'html',
     },
   },
+  html: {
+    enabled: true,
+    source: 'src/index.html',
+    dest: 'build/',
+    lint: true,
+  },
 };
