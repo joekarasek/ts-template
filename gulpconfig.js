@@ -12,13 +12,13 @@ module.exports = {
     ],
     dest: 'build/css/',
     lint: true,
-    // outputStyles maybe 'expanded' or 'compressed'
+    // outputStyles maybe 'expanded', 'compressed', 'nested'
     outputStyle: 'expanded',
     sourceMap: false,
     sourceComments: false,
     autoPrefixerBrowsers: [
-      'last 2 versions',
-      'IE >= 10',
+        'last 2 versions',
+        'IE >= 10',
     ],
     flattenOutput: true,
     sassdoc: {
@@ -36,9 +36,15 @@ module.exports = {
     babel: false,
     uglify: false,
     sourceMap: false,
-    includePaths: [],
-  },
-  validate: {
-    enabled: false,
+    includePaths: [
+        'src/canvas/js/**/*.js',
+    ],
+    eslint: {
+      enabled: true,
+      sources: [
+          'src/js/**/*.js',
+          'gulpfile.js',
+      ],
+    },
   },
 };

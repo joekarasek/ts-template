@@ -8,6 +8,7 @@
     "gulp:compile": "gulp compile",
     "gulp:clean": "gulp clean",
     "gulp:validate": "gulp validate",
+    "gulp:watch": "gulp watch",
     "gulp:tasks": "gulp --tasks"
   },
   "devDependencies": {

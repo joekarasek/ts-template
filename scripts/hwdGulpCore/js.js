@@ -16,8 +16,9 @@ module.exports = (gulp, config, tasks) => {
 
   function compileJs(done) {
     // if there are include paths, adds them to an array sources, otherwise uses just config.js.source
-    const source = config.js.includePaths ? config.js.includePaths.push(config.js.source) : config.js.source;
-    gulp.src(config.js.source)
+    const source = config.js.includePaths ? config.js.includePaths : [];
+    source.push(config.js.source);
+    gulp.src(source)
         .pipe(gulpif(config.js.sourceMap, sourcemaps.init()))
         .pipe(gulpif(config.js.babel, babel())) // all babel options handled in `.babelrc`
         .pipe(concat(config.js.destFileName))
@@ -37,14 +38,16 @@ module.exports = (gulp, config, tasks) => {
 
 
   function validateJs() {
-    return gulp.src(config.js.eslint.source)
+    return gulp.src(config.js.eslint.sources)
         .pipe(cached('validate:js'))
         .pipe(eslint())
         .pipe(eslint.format());
   }
   validateJs.description = 'Lint JS.';
-  gulp.task('validate:js', () => validateJs().pipe(eslint.failAfterError()));
-  tasks.validate.push('validate:js');
+  gulp.task('validate:js', () => validateJs());
+  if (config.js.lint) {
+    tasks.validate.push('validate:js');
+  }
 
 
   gulp.task('watch:js', () => gulp.watch(config.js.source, gulp.parallel('compile:js', validateJs)));

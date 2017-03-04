@@ -14,13 +14,5 @@ module.exports = (gulp, config, tasks) => {
   if (config.js.enabled) {
     require('./js')(gulp, config, tasks);
   }
-  //
-  // if (config.validate.enabled) {
-  //   require('./validate')(gulp, config, tasks);
-  // }
-  //
-  // if (config.docs.enabled) {
-  //   require('./docs')(gulp, config, tasks);
-  // }
-  //
+
 };

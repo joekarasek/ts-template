@@ -21,12 +21,12 @@ gulp.task('compile', gulp.series(
     gulp.series(tasks.compile)
 ));
 gulp.task('validate', gulp.parallel(tasks.validate));
-// gulp.task('watch', gulp.parallel(tasks.watch));
-// tasks.default.push('watch');
-// gulp.task('default', gulp.series(
-//     'compile',
-//     gulp.parallel(tasks.default)
-// ));
+gulp.task('watch', gulp.parallel(tasks.watch));
+tasks.default.push('watch');
+gulp.task('default', gulp.series(
+    'compile',
+    gulp.parallel(tasks.default)
+));
 
 
 // const cache = require('gulp-cache');
