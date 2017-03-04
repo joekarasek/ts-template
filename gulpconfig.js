@@ -10,7 +10,7 @@ module.exports = {
     includePaths: [
         'src/canvas/scss/',
     ],
-    dest: 'src/css/',
+    dest: 'build/css/',
     lint: true,
     // outputStyles maybe 'expanded' or 'compressed'
     outputStyle: 'expanded',
@@ -31,7 +31,7 @@ module.exports = {
   js: {
     enabled: true,
     source: 'src/js/*.js',
-    dest: 'src/js/',
+    dest: 'build/js/',
     destFileName: 'main.js',
     babel: false,
     uglify: false,
