@@ -8,9 +8,8 @@ const cached = require('gulp-cached');
 const gulpif = require('gulp-if');
 const del = require('del');
 const browserSync = require('browser-sync');
-const bowerFiles = require('main-bower-files');
 const path = require('path');
-
+const jsdoc = require('gulp-documentation');
 
 module.exports = (gulp, config, tasks) => {
 
@@ -36,6 +35,13 @@ module.exports = (gulp, config, tasks) => {
   gulp.task('compile:js', compileJs);
   tasks.compile.push('compile:js');
 
+  gulp.task('clean:js', (done) => {
+    del([
+      `${config.js.dest}*.{js,js.map}`,
+    ], { force: true }).then( () => { done(); } );
+  });
+  tasks.clean.push('clean:js');
+
 
   function validateJs() {
     return gulp.src(config.js.eslint.sources)
@@ -54,11 +60,21 @@ module.exports = (gulp, config, tasks) => {
   tasks.watch.push('watch:js');
 
 
-  gulp.task('clean:js', (done) => {
-    del([
-      `${config.js.dest}*.{js,js.map}`,
-    ], { force: true }).then( () => { done(); } );
+  function docsJs() {
+    return gulp.src(config.js.documentationJs.sources)
+        .pipe(jsdoc(config.js.documentationJs.format))
+        .pipe(gulp.dest(config.js.documentationJs.dest));
+  };
+  docsJs.description = 'Build JS docs with Documentation.JS';
+  gulp.task('docs:jsdoc', docsJs);
+  gulp.task('clean:docs:jsdoc', (done) => {
+    del([config.js.documentationJs.dest]).then(() => {
+    done();
   });
-  tasks.clean.push('clean:js');
+  });
+  if (config.js.documentationJs.enabled) {
+    tasks.compile.push('docs:jsdoc');
+    tasks.clean.push('clean:docs:jsdoc');
+  }
 
 };

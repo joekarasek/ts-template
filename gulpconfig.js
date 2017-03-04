@@ -46,5 +46,14 @@ module.exports = {
           'gulpfile.js',
       ],
     },
+    documentationJs: {
+      enabled: true,
+      sources: [
+        'src/js/**/*.js',
+      ],
+      dest: 'jsdoc',
+      // Either 'html', 'md', or 'json'
+      format: 'html',
+    },
   },
 };
