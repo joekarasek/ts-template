@@ -11,7 +11,7 @@ module.exports = {
         'src/canvas/scss/',
     ],
     dest: 'build/css/',
-    lint: true,
+    lint: false,
     // outputStyles maybe 'expanded', 'compressed', 'nested'
     outputStyle: 'expanded',
     sourceMap: false,
@@ -40,7 +40,7 @@ module.exports = {
         'src/canvas/js/**/*.js',
     ],
     eslint: {
-      enabled: true,
+      enabled: false,
       sources: [
           'src/js/**/*.js',
           'gulpfile.js',
@@ -58,8 +58,13 @@ module.exports = {
   },
   html: {
     enabled: true,
-    source: 'src/index.html',
+    sources: [
+        'src/index.html'
+    ],
     dest: 'build/',
-    lint: true,
+    lint: false,
+    swig: {
+      enabled: false,
+    },
   },
 };
