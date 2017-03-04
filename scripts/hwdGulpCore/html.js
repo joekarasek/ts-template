@@ -1,11 +1,11 @@
-const htmlhint = require("gulp-htmlhint");
+const htmlhint = require('gulp-htmlhint');
 
 module.exports = (gulp, config, tasks) => {
 
   function validateHtml() {
     return gulp.src(config.html.source)
         .pipe(htmlhint())
-        .pipe(htmlhint.reporter());
+        .pipe(htmlhint.reporter('htmlhint-stylish'));
   };
   validateHtml.description = 'Lint Html';
   gulp.task('validate:html', () => validateHtml());
